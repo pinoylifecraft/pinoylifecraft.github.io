@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+:root {
+    --lightcolor: #f6f6f6;
+    --primarycolor: #05060f;
+    --secondarycolor: #696a6f;
+    --backuptext: #1a5f96;
+    --backuptextlight: #1d73b9;
+    --backgroundcolor: #020711;
+}
+body {
+    background-color: var(--lightcolor);
+    color: var(--secondarycolor);
+    overflow-x: hidden;
+}
+#error404Container {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+}
+#error404Title {
+    font-size: 164px;
+    font-weight: 800;
+    background-color: rgba(255, 0, 0, 0);
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+#error404Player {
+    margin: 48px 0px 28px 0px;
+    cursor: help;
+}
+#error404Subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 64px;
+}
+#error404Button {
+    padding: 0px 42px;
+    height: 42px;
+    background-color: var(--backuptextlight);
+    border-style: none;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--lightcolor);
+}
+#error404Button:hover {
+    background-color: var(--backuptext);
+    cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+    #error404Title {
+        font-size: 96px;
+        font-weight: 700;
+    }
+}
