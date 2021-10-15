@@ -466,8 +466,9 @@ body {
     cursor: pointer;
 }
 #aboutTrailerVideo {
-    width: 560px;
-    height: 315px;
+    height: 480px;
+    max-width: 835px;
+    width: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -571,11 +572,7 @@ body {
         margin: auto;
     }
     #aboutTrailer {
-        width: 535.61px;
-    }
-    #aboutTrailerVideo {
-        height: 480px;
-        max-width: 835px;
+        max-width: 535.61px;
         width: 95%;
     }
 }
