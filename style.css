@@ -299,10 +299,12 @@ body {
 }
 .newsThumbnail {
     width: 277px;
+    background-color: var(--primarycolor);
     border: 2px solid var(--primarycolor);
     transition: transform .2s;
 }
 .newsLink:hover .newsThumbnail {
+    background-color: var(--backuptextlight);
     transform: scale(1.04);
     border: 2px solid var(--backuptextlight);
 }
@@ -345,7 +347,7 @@ body {
 #aboutContainer {
     width: 1024px;
     margin: auto;
-    padding: 64px 0px 72px;
+    padding: 0px 0px 72px;
     position: relative;
 }
 #aboutTitle {
@@ -366,6 +368,7 @@ body {
     color: var(--secondarycolor);
 }
 #aboutTrailer {
+    background-color: var(--backuptext);
     border: 5px solid var(--backuptext);
     height: 290px;
     width: 480px;
@@ -573,7 +576,7 @@ body {
     }
     #aboutTrailer {
         max-width: 535.61px;
-        width: 95%;
+        width: 97%;
     }
 }
 @media screen and (max-width: 360px) {
@@ -607,7 +610,7 @@ body {
         width: 80%;
     }
     #aboutTrailer {
-        width: 95%;
+        width: 97%;
         height: 200px;
     }
     #aboutTrailerButton {
