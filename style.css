@@ -362,48 +362,92 @@ body {
     width: 75%;
     text-align: center;
     margin: auto;
-    padding: 42px 0px 120px;
+    padding: 42px 0px 84px;
     color: var(--secondarycolor);
 }
-#aboutImage {
-    margin-left: 64px;
-    cursor: help;
-}
 #aboutTrailer {
-    background-color: var(--primarycolor);
-    border: 2px solid var(--primarycolor);
-    height: 200px;
-    width: 400px;
-    position: absolute;
-    bottom: 72px;
-    right: 64px;
+    border: 5px solid var(--backuptext);
+    height: 290px;
+    width: 480px;
+    margin: auto;
+    position: relative;
     overflow: hidden;
 }
-#aboutTrailer:hover {
-    border: 2px solid var(--backuptextlight);
-    cursor: pointer;
-}
 #aboutTrailerThumbnail {
-    width: 100%;
+    height: 100%;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#aboutTrailerWatchtext {
+    position: absolute;
+    left: 50%;
     bottom: 0px;
-    left: 0px;
-    filter: opacity(.85);
+    transform: translateX(-50%);
+    color: var(--lightcolor);
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 16px 0px;
 }
 #aboutTrailerButton {
     position: absolute;
-    top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 42px;
-    height: 42px;
-    background: radial-gradient(ellipse, var(--lightcolor)  50%, var(--backuptextlight));
-    border-radius: 50%;
-    transition: transform .2s;
+    bottom: 35%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 46px;
+    background-color: #005885;
+    margin: 23.09px 0;
+    border-left: solid 5px #004264;
+    border-right: solid 5px #4083a4;
 }
-#aboutTrailer:hover #aboutTrailerButton {
-    transform: translate(-50%, -50%) scale(1.1);
+#aboutTrailerButton:before,
+#aboutTrailerButton:after {
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: #005885;
+    left: 7px;
+}
+#aboutTrailerButton:before {
+    top: -28px;
+    border-top: solid 7.0711px #4083a4;
+    border-right: solid 7.0711px #80acc2;
+}
+
+#aboutTrailerButton:after {
+    bottom: -28px;
+    border-bottom: solid 7.0711px #004264;
+    border-left: solid 7.0711px #002d43;
+}
+#aboutTrailerPlayButton {
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    z-index: 1;
+}
+#aboutTrailerButton:hover {
     cursor: pointer;
+    background-color: #313131;
+    border-left: solid 5px #252525;
+    border-right: solid 5px #656565;
+}
+#aboutTrailerButton:hover:before {
+    background-color: #313131;
+    border-top: solid 7.0711px #656565;
+    border-right: solid 7.0711px #989898;
+}
+#aboutTrailerButton:hover:after {
+    background-color: #313131;
+    border-bottom: solid 7.0711px #252525;
+    border-left: solid 7.0711px #191919;
 }
 #aboutTrailerVideoBG {
     position: fixed;
@@ -520,19 +564,19 @@ body {
     }
     #aboutDescription {
         width: 90%;
-        padding: 42px 0px 64px;
+        padding: 42px 0px;
     }
     #aboutImage {
         display: block;
         margin: auto;
     }
     #aboutTrailer {
-        position: relative;
-        width: 400px;
-        bottom: auto;
-        right: auto;
-        top: 64px;
-        margin: auto;
+        width: 535.61px;
+    }
+    #aboutTrailerVideo {
+        height: 480px;
+        max-width: 835px;
+        width: 95%;
     }
 }
 @media screen and (max-width: 360px) {
@@ -566,7 +610,11 @@ body {
         width: 80%;
     }
     #aboutTrailer {
-        width: 90%;
+        width: 95%;
+        height: 200px;
+    }
+    #aboutTrailerButton {
+        transform: translateX(-50%) scale(.75);
     }
     #aboutTrailerThumbnail {
         height: 100%;
