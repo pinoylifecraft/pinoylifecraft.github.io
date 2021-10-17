@@ -4,8 +4,9 @@ var mobilenavMenuClose = document.getElementById("mobilenavMenuClose")
 var navList = document.getElementById("navList")
 var mobilenavLogo = document.getElementById("mobilenavLogo")
 var mobilenavMenuBackground = document.getElementById("mobilenavMenuBackground")
-var aboutTrailerVideoBG = document.getElementById("aboutTrailerVideoBG")
+var viewerBG1 = document.getElementsByClassName("viewerBG")[0]
 var aboutTrailerVideo = document.getElementById("aboutTrailerVideo")
+var viewerBG2 = document.getElementsByClassName("viewerBG")[1]
 
 // PRE LOADER or SPLASH SCREEN
 window.addEventListener("load", function () {
@@ -37,9 +38,9 @@ function mobilenavMenuFadein () {
 // TRAILER (PLC SERVER)
 function trailerVideoOpen () {
     aboutTrailerVideo.src = "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=1"
-    aboutTrailerVideoBG.style.display = "block"
+    viewerBG1.style.display = "block"
 }
 function trailerVideoClose () {
     aboutTrailerVideo.src = "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=0"
-    aboutTrailerVideoBG.style.display = "none"
+    viewerBG1.style.display = "none"
 }

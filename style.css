@@ -283,11 +283,8 @@ body {
 }
 #aboutSection {
     background-color: var(--backgroundcolor);
-    box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-                 10px 20px 5px rgba(0,0,0,0.05),
-                 -10px 20px 5px rgba(0,0,0,0.05);
     width: 100%;
-    margin: -6px auto 64px;
+    margin: -6px 0px 0px;
     padding-bottom: 100px;
 }
 #aboutContainer {
@@ -310,7 +307,7 @@ body {
     color: var(--lightcolor);
 }
 #aboutDesc {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
     color: var(--lightcolor);
 }
@@ -401,7 +398,7 @@ body {
     border-bottom: solid 7.0711px #252525;
     border-left: solid 7.0711px #191919;
 }
-#aboutTrailerVideoBG {
+.viewerBG {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -411,7 +408,7 @@ body {
     z-index: 10;
     display: none;
 }
-#aboutTrailerVideoClose {
+.viewerBGClose {
     position: absolute;
     right: 18px;
     top: 18px;
@@ -425,6 +422,41 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#screenshotSection {
+    background-color: var(--backgroundcolor);
+    box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: -2px 0px 64px;
+    padding-bottom: 100px;
+}
+#screenshotHeader {
+    color: var(--lightcolor);
+    padding: 4px 2.5% 32px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+#screenshotContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+}
+#screenshotContainer img {
+    margin: 22px 18px;
+    width: 318px;
+    background-color: var(--lightcolor);
+    border: 2px solid var(--lightcolor);
+    transition: transform .2s;
+}
+#screenshotContainer img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -473,7 +505,7 @@ body {
         width: 100%;
     }
     #aboutSection {
-        margin: -32px auto 64px;
+        margin: -32px 0px 0px;
     }
     #aboutContainer {
         height: auto;
@@ -493,6 +525,11 @@ body {
         text-align: center;
     }
 }
+@media screen and (max-width: 744px) {
+    #screenshotContainer img {
+        width: 97%;
+    }
+}
 @media screen and (max-width: 360px) {
     #homeContent {
         width: 90%;
@@ -510,5 +547,8 @@ body {
     #aboutTrailerVideo {
         width: 360px;
         height: 202px;
+    }
+    #screenshotContainer img {
+        margin: 8px 18px;
     }
 }
