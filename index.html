@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Welcome to Pinoy LifeCraft</title>
+        <title>Pinoy LifeCraft > Welcome to Pinoy LifeCraft, Mabuhay!</title>
         <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width", initial-scale=1.0>
@@ -84,7 +84,8 @@
                 </div>
             </div>
             <div class="viewerBG" onclick="trailerVideoClose()">
-                <svg width="32" height="32" class="viewerBGClose" viewBox="0 0 32 32">
+                <svg width="32" height="32" class="viewerBGClose" viewBox="0 0 32 32" title="Close">
+                    <title>Close</title>
                     <circle opacity=".1" fill="var(--lightcolor)" cx="16" cy="16" r="16"></circle>
                     <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="var(--lightcolor)" stroke-width="2"></path>
                 </svg>
@@ -95,17 +96,54 @@
         <div id="screenshotSection">
             <p id="screenshotHeader">GAMEPLAY SCREENSHOTS</p>
             <div id="screenshotContainer">
-                <img src="https://i.imgur.com/LZoZ89a.png" alt="Screenshot 1 - Creative Menu">
-                <img src="https://i.imgur.com/L5oOx62.png" alt="Screenshot 2 - Hiding in the Bush">
-                <img src="https://i.imgur.com/hR6S5Po.png" alt="Screenshot 3 - Creative Menu Button">
-                <img src="https://i.imgur.com/VwMmk60.png" alt="Screenshot 4 - Server Tab">
-                <img src="https://i.imgur.com/zulmRcE.png" alt="Screenshot 5 - Creative Furniture">
-                <img src="https://i.imgur.com/U3suTWR.png" alt="Screenshot 6 - Creative Pet">
+                <img src="https://i.imgur.com/LZoZ89a.png"
+                    onclick="screenshotOpen1()"
+                    alt="Screenshot 1 - Creative Menu">
+                <img src="https://i.imgur.com/L5oOx62.png"
+                    onclick="screenshotOpen2()"
+                    alt="Screenshot 2 - Hiding in the Bush">
+                <img src="https://i.imgur.com/hR6S5Po.png"
+                    onclick="screenshotOpen3()"
+                    alt="Screenshot 3 - Creative Menu Button">
+                <img src="https://i.imgur.com/VwMmk60.png"
+                    onclick="screenshotOpen4()"
+                    alt="Screenshot 4 - Server Tab">
+                <img src="https://i.imgur.com/zulmRcE.png"
+                    onclick="screenshotOpen5()"
+                    alt="Screenshot 5 - Creative Furniture">
+                <img src="https://i.imgur.com/U3suTWR.png"
+                    onclick="screenshotOpen6()"
+                    alt="Screenshot 6 - Creative Pet">
             </div>
-            <div id="viewerBG" onclick="trailerVideoClose()">
-                <svg width="32" height="32" class="viewerBGClose" viewBox="0 0 32 32">
+            <div class="viewerBG">
+                <svg width="32" height="32" class="viewerBGClose" onclick="screenshotClose()" viewBox="0 0 32 32" title="Close">
+                    <title>Close</title>
                     <circle opacity=".1" fill="var(--lightcolor)" cx="16" cy="16" r="16"></circle>
                     <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="var(--lightcolor)" stroke-width="2"></path>
+                </svg>
+                <div id="screenshotImageContainer">
+                    <img src="https://i.imgur.com/LZoZ89a.png"
+                        alt="Screenshot 1 - Creative Menu">
+                </div>
+                <svg id="screenshotImagePrev" x="0px" y="0px"
+	                viewBox="0 0 55.752 55.752">
+                    <title>Previous</title>
+                    <g>
+                        <path fill="var(--lightcolor)" d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+                            c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+                            s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+                            C44.605,26.413,44.086,24.993,43.006,23.916z"/>
+                    </g>
+                </svg>
+                <svg id="screenshotImageNext" x="0px" y="0px"
+	                viewBox="0 0 55.752 55.752">
+                    <title>Next</title>
+                    <g>
+                        <path fill="var(--lightcolor)" d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+                            c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+                            s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+                            C44.605,26.413,44.086,24.993,43.006,23.916z"/>
+                    </g>
                 </svg>
             </div>
         </div>

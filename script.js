@@ -44,3 +44,11 @@ function trailerVideoClose () {
     aboutTrailerVideo.src = "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=0"
     viewerBG1.style.display = "none"
 }
+
+// GAMEPLAY SCREENSHOTS
+function screenshotOpen1 () {
+    viewerBG2.style.display = "block"
+}
+function screenshotClose () {
+    viewerBG2.style.display = "none"
+}
