@@ -7,6 +7,10 @@ var mobilenavMenuBackground = document.getElementById("mobilenavMenuBackground")
 var viewerBG1 = document.getElementsByClassName("viewerBG")[0]
 var aboutTrailerVideo = document.getElementById("aboutTrailerVideo")
 var viewerBG2 = document.getElementsByClassName("viewerBG")[1]
+var screenshotImageCounter = document.getElementById("screenshotImageCounter")
+var screenshotImagePrev = document.getElementById("screenshotImagePrev")
+var screenshotImageNext = document.getElementById("screenshotImageNext")
+var screenshotImage = document.getElementById("screenshotImage")
 
 // PRE LOADER or SPLASH SCREEN
 window.addEventListener("load", function () {
@@ -48,6 +52,25 @@ function trailerVideoClose () {
 // GAMEPLAY SCREENSHOTS
 function screenshotOpen1 () {
     viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "1"
+    screenshotImagePrev.style.display = "none"
+    screenshotImage.src = "https://i.imgur.com/LZoZ89a.png"
+    screenshotImage.alt = "Screenshot 1 - Creative Menu"
+    screenshotImageNext.setAttribute("onclick") = "screenshotNext1()"
+}
+function screenshotNext1 () {
+    screenshotImagePrev.style.display = "block"
+    screenshotImageCounter.innerHTML = "2"
+    screenshotImage.src = "https://i.imgur.com/L5oOx62.png"
+    screenshotImage.alt = "Screenshot 2 - Hiding in the Bush"
+    screenshotImageNext.setAttribute("onclick") = "screenshotNext2()"
+}
+function screenshotOpen2 () {
+    viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "2"
+    screenshotImage.src = "https://i.imgur.com/L5oOx62.png"
+    screenshotImage.alt = "Screenshot 2 - Hiding in the Bush"
+    screenshotImageNext.setAttribute("onclick") = "screenshotNext1()"
 }
 function screenshotClose () {
     viewerBG2.style.display = "none"

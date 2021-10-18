@@ -468,6 +468,14 @@ body {
 #screenshotImageContainer img {
     width: 100%;
 }
+#screenshotImageText {
+    color: var(--lightcolor);
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    text-shadow: 0px 0px 5px #000;
+}
 #screenshotImagePrev {
     enable-background: new 0 0 55.752 55.752;
     position: absolute;
