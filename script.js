@@ -56,21 +56,125 @@ function screenshotOpen1 () {
     screenshotImagePrev.style.display = "none"
     screenshotImage.src = "https://i.imgur.com/LZoZ89a.png"
     screenshotImage.alt = "Screenshot 1 - Creative Menu"
-    screenshotImageNext.setAttribute("onclick") = "screenshotNext1()"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext1()")
 }
 function screenshotNext1 () {
     screenshotImagePrev.style.display = "block"
     screenshotImageCounter.innerHTML = "2"
     screenshotImage.src = "https://i.imgur.com/L5oOx62.png"
     screenshotImage.alt = "Screenshot 2 - Hiding in the Bush"
-    screenshotImageNext.setAttribute("onclick") = "screenshotNext2()"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext2()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev2()")
+}
+function screenshotPrev2 () {
+    screenshotImageCounter.innerHTML = "1"
+    screenshotImagePrev.style.display = "none"
+    screenshotImage.src = "https://i.imgur.com/LZoZ89a.png"
+    screenshotImage.alt = "Screenshot 1 - Creative Menu"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext1()")
 }
 function screenshotOpen2 () {
     viewerBG2.style.display = "block"
     screenshotImageCounter.innerHTML = "2"
     screenshotImage.src = "https://i.imgur.com/L5oOx62.png"
     screenshotImage.alt = "Screenshot 2 - Hiding in the Bush"
-    screenshotImageNext.setAttribute("onclick") = "screenshotNext1()"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext2()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev2()")
+}
+function screenshotNext2 () {
+    screenshotImageCounter.innerHTML = "3"
+    screenshotImage.src = "https://i.imgur.com/hR6S5Po.png"
+    screenshotImage.alt = "Screenshot 3 - Creative Menu Button"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext3()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev3()")
+}
+function screenshotPrev3 () {
+    screenshotImageCounter.innerHTML = "2"
+    screenshotImage.src = "https://i.imgur.com/L5oOx62.png"
+    screenshotImage.alt = "Screenshot 2 - Hiding in the Bush"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext2()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev2()")
+}
+function screenshotOpen3 () {
+    viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "3"
+    screenshotImage.src = "https://i.imgur.com/hR6S5Po.png"
+    screenshotImage.alt = "Screenshot 3 - Creative Menu Button"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext3()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev3()")
+}
+function screenshotNext3 () {
+    screenshotImageCounter.innerHTML = "4"
+    screenshotImage.src = "https://i.imgur.com/VwMmk60.png"
+    screenshotImage.alt = "Screenshot 4 - Server Tab"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext4()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev4()")
+}
+function screenshotPrev4 () {
+    screenshotImageCounter.innerHTML = "3"
+    screenshotImage.src = "https://i.imgur.com/hR6S5Po.png"
+    screenshotImage.alt = "Screenshot 3 - Creative Menu Button"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext3()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev3()")
+}
+function screenshotOpen4 () {
+    viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "4"
+    screenshotImage.src = "https://i.imgur.com/VwMmk60.png"
+    screenshotImage.alt = "Screenshot 4 - Server Tab"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext4()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev4()")
+}
+function screenshotNext4 () {
+    screenshotImageCounter.innerHTML = "5"
+    screenshotImage.src = "https://i.imgur.com/zulmRcE.png"
+    screenshotImage.alt = "Screenshot 5 - Creative Furniture"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext5()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev5()")
+}
+function screenshotPrev5 () {
+    screenshotImageCounter.innerHTML = "4"
+    screenshotImage.src = "https://i.imgur.com/VwMmk60.png"
+    screenshotImage.alt = "Screenshot 4 - Server Tab"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext4()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev4()")
+}
+function screenshotOpen5 () {
+    viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "5"
+    screenshotImage.src = "https://i.imgur.com/zulmRcE.png"
+    screenshotImage.alt = "Screenshot 5 - Creative Furniture"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext5()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev5()")
+}
+function screenshotNext5 () {
+    screenshotImageCounter.innerHTML = "6"
+    screenshotImage.src = "https://i.imgur.com/U3suTWR.png"
+    screenshotImage.alt = "Screenshot 6 - Creative Pet"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext6()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev6()")
+}
+function screenshotPrev6 () {
+    screenshotImageCounter.innerHTML = "5"
+    screenshotImage.src = "https://i.imgur.com/zulmRcE.png"
+    screenshotImage.alt = "Screenshot 5 - Creative Furniture"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext5()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev5()")
+}
+function screenshotOpen6 () {
+    viewerBG2.style.display = "block"
+    screenshotImageCounter.innerHTML = "6"
+    screenshotImage.src = "https://i.imgur.com/U3suTWR.png"
+    screenshotImage.alt = "Screenshot 6 - Creative Pet"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext6()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev6()")
+}
+function screenshotNext6 () {
+    screenshotImageCounter.innerHTML = "7"
+    screenshotImage.src = "https://i.imgur.com/U3suTWR.png"
+    screenshotImage.alt = "Screenshot 6 - Creative Pet"
+    screenshotImageNext.setAttribute("onclick", "screenshotNext6()")
+    screenshotImagePrev.setAttribute("onclick", "screenshotPrev6()")
 }
 function screenshotClose () {
     viewerBG2.style.display = "none"

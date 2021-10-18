@@ -453,6 +453,8 @@ body {
     background-color: var(--lightcolor);
     border: 2px solid var(--lightcolor);
     transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
 }
 #screenshotContainer img:hover {
     transform: scale(1.02);
@@ -467,6 +469,9 @@ body {
 }
 #screenshotImageContainer img {
     width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
 }
 #screenshotImageText {
     color: var(--lightcolor);
