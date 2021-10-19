@@ -430,7 +430,7 @@ body {
                  -10px 20px 5px rgba(0,0,0,0.05);
     width: 100%;
     margin: -2px 0px 64px;
-    padding-bottom: 100px;
+    padding-bottom: 64px;
 }
 #screenshotHeader {
     color: var(--lightcolor);
@@ -498,6 +498,91 @@ body {
     transform: translateY(-50%);
     height: 18px;
     cursor: pointer;
+}
+#newsSection {
+    background-color: var(--lightcolor);
+    width: 100%;
+    padding-bottom: 100px;
+}
+#newsHeader {
+    color: var(--primarycolor);
+    padding: 4px 2.5% 64px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+#newsContainer {
+    display: flex;
+    width: 1064px;
+    max-width: 95%;
+    height: auto;
+    margin: auto;
+    overflow-y: hidden;
+    padding: 8px;
+}
+.newsImage {
+    width: 332px;
+    background-color: var(--backgroundcolor);
+    border: 3px solid var(--backgroundcolor);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.newsImage:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+#newsImage2 {
+    margin: 0px 24px 8px;
+}
+.newsTitle {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 0px;
+    width: 332px;
+}
+.newsTagServer {
+    font-weight: 500;
+    background-color: var(--backuptextlight);
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsTagAnnouncement {
+    font-weight: 500;
+    background-color: #b90f2e;
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsTagStaff {
+    font-weight: 500;
+    background-color: var(--secondarycolor);
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsDate {
+    margin-left: 16px;
+    color: var(--secondarycolor);
+}
+#newsSeemore {
+    display: inline-block;
+    position: relative;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--backuptext);
+    text-decoration: none;
+}
+#newsSeemore span {
+    padding: 0px 8px 0px 8px;
+    transition: padding .4s;
+}
+#newsSeemore:hover span {
+    padding: 0px 0px 0px 16px;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
