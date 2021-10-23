@@ -616,13 +616,6 @@ body {
     color: var(--backuptext);
     text-decoration: none;
 }
-#newsSeemore span {
-    padding: 0px 8px 0px 8px;
-    transition: padding .4s;
-}
-#newsSeemore:hover span {
-    padding: 0px 0px 0px 16px;
-}
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
         top: 40%;
