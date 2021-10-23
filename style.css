@@ -490,9 +490,9 @@ body {
     bottom: 0px;
     text-align: center;
     font-size: 10px;
-    font-weight: bold;
+    font-weight: 500;
     background-color: var(--lightcolor);
-    padding: 6px 12px;
+    padding: 12px 32px;
     border-radius: 3px;
 }
 #screenshotContainer img:hover {
@@ -722,7 +722,10 @@ body {
     #screenshotContainer img {
         margin: 8px 18px;
     }
-    #screenshotContainerMobile  img {
+    #screenshotContainerMobile img {
         margin: 8px 18px;
+    }
+    #screenshotsViewmoreText {
+        padding: 6px 13px;
     }
 }
