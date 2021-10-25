@@ -7,8 +7,8 @@
 }
 :root {
     --lightcolor: #f6f6f6;
-    --primarycolor: #05060f;
-    --secondarycolor: #696a6f;
+    --primarycolor: #2e3034;
+    --secondarycolor: #696969;
     --backuptext: #1a5f96;
     --backuptextlight: #1d73b9;
     --backgroundcolor: #020711;
@@ -21,7 +21,7 @@ body {
 #splashScreen {
     width: 100%;
     height: 100vh;
-    background-color: var(--primarycolor);
+    background-color: var(--backgroundcolor);
     position: fixed;
     z-index: 9;
 }
@@ -57,7 +57,7 @@ body {
     width: 100%;
     height: 80px;
     padding-top: 19px;
-    background-color: var(--primarycolor);
+    background-color: var(--backgroundcolor);
     position: relative;
     z-index: 6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -275,7 +275,7 @@ body {
     color: var(--lightcolor);
     background-color: var(--backuptextlight);
     border-style: none;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 #homeContentPlaynow:hover {
     background-color: var(--backuptext);
@@ -302,18 +302,18 @@ body {
 }
 #aboutTitle {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
     padding-bottom: 26px;
     color: var(--lightcolor);
 }
 #aboutDesc {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
     color: var(--lightcolor);
 }
 #aboutTrailer {
-    background-color: var(--lightcolor);
-    border: 3px solid var(--lightcolor);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.05);
     height: 290px;
     width: 480px;
     position: relative;
@@ -338,41 +338,22 @@ body {
     font-weight: 600;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #020711d0;
     padding: 16px 0px;
 }
 #aboutTrailerButton {
     position: absolute;
     left: 50%;
-    bottom: 35%;
+    top: 40%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 46px;
-    background-color: #005885;
-    margin: 23.09px 0;
-    border-left: solid 5px #004264;
-    border-right: solid 5px #4083a4;
+    width: 68px;
+    height: 48px;
+    background-color: #020711c0;
+    border-radius: 4px;
 }
-#aboutTrailerButton:before,
-#aboutTrailerButton:after {
-    content: "";
-    position: absolute;
-    width: 49px;
-    height: 49px;
-    transform: scaleY(0.5774) rotate(-45deg);
-    background-color: #005885;
-    left: 7px;
-}
-#aboutTrailerButton:before {
-    top: -28px;
-    border-top: solid 7.0711px #4083a4;
-    border-right: solid 7.0711px #80acc2;
-}
-
-#aboutTrailerButton:after {
-    bottom: -28px;
-    border-bottom: solid 7.0711px #004264;
-    border-left: solid 7.0711px #002d43;
+#aboutTrailerButton:hover {
+    background-color: #020711;
+    cursor: pointer;
 }
 #aboutTrailerPlayButton {
     width: 20px;
@@ -381,22 +362,6 @@ body {
     top: 50%;
     transform: translate(-40%, -50%);
     z-index: 1;
-}
-#aboutTrailerButton:hover {
-    cursor: pointer;
-    background-color: #313131;
-    border-left: solid 5px #252525;
-    border-right: solid 5px #656565;
-}
-#aboutTrailerButton:hover:before {
-    background-color: #313131;
-    border-top: solid 7.0711px #656565;
-    border-right: solid 7.0711px #989898;
-}
-#aboutTrailerButton:hover:after {
-    background-color: #313131;
-    border-bottom: solid 7.0711px #252525;
-    border-left: solid 7.0711px #191919;
 }
 .viewerBG {
     position: fixed;
@@ -459,8 +424,8 @@ body {
 #screenshotContainer img {
     margin: 22px 18px;
     width: 318px;
-    background-color: var(--lightcolor);
-    border: 2px solid var(--lightcolor);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.05);
     transition: transform .2s;
     user-select: none;
     -webkit-user-select: none;
@@ -468,8 +433,8 @@ body {
 .screenshotsImageMobile {
     margin: 22px 18px;
     width: 97%;
-    background-color: var(--lightcolor);
-    border: 2px solid var(--lightcolor);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.05);
     user-select: none;
     -webkit-user-select: none;
 }
@@ -480,8 +445,8 @@ body {
 #screenshotsViewmoreThumbnail {
     margin: 22px 0px;
     width: 97%;
-    background-color: var(--lightcolor);
-    border: 2px solid var(--lightcolor);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.05);
     user-select: none;
     -webkit-user-select: none;
 }
@@ -548,7 +513,7 @@ body {
     padding: 4px 2.5% 64px;
     text-align: center;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: bold;
 }
 #newsContainer {
     display: flex;
@@ -561,8 +526,8 @@ body {
 }
 .newsImage {
     width: 332px;
-    background-color: var(--backgroundcolor);
-    border: 3px solid var(--backgroundcolor);
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
     transition: transform .2s;
     user-select: none;
     -webkit-user-select: none;
@@ -575,7 +540,7 @@ body {
     margin: 0px 24px 8px;
 }
 .newsTitle {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     padding: 14px 0px;
     width: 332px;
@@ -616,6 +581,41 @@ body {
     color: var(--backuptext);
     text-decoration: none;
 }
+.featureSection {
+    width: 100%;
+    padding: 64px 0px;
+}
+.featureContainer {
+    width: 1064px;
+    max-width: 95%;
+    height: 300px;
+    margin: auto;
+    padding: 0px 22px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.featureTextContainer {
+    width: 475px;
+}
+.featureTitle {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 26px;
+    color: var(--primarycolor);
+}
+.featureDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondarycolor);
+}
+.featureImage {
+    height: 290px;
+    width: 480px;
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
+}
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
         top: 40%;
@@ -635,7 +635,7 @@ body {
         left: -250px;
         height: 100vh;
         width: 250px;
-        background-color: var(--primarycolor);
+        background-color: var(--backgroundcolor);
     }
     #navList1 {
         flex-direction: column;
