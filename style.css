@@ -458,7 +458,7 @@ body {
     font-weight: 500;
     background-color: var(--lightcolor);
     padding: 12px 32px;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 #screenshotContainer img:hover {
     transform: scale(1.02);
@@ -678,6 +678,25 @@ body {
     }
     #aboutDesc {
         text-align: center;
+    }
+    .featureContainer {
+        height: auto;
+        flex-direction: column;
+        padding: 0px 0px;
+    }
+    .featureTextContainer {
+        width: 95%;
+    }
+    .featureTitle {
+        text-align: center;
+    }
+    .featureDesc {
+        text-align: center;
+        padding-bottom: 32px;
+    }
+    .featureImage {
+        max-width: 100%;
+        height: auto;
     }
 }
 @media screen and (max-width: 744px) {
