@@ -579,6 +579,40 @@ body {
     text-align: center;
     margin: 42px auto auto auto;
 }
+#featureShortSection {
+    padding: 32px 0px;
+}
+#featureShortHeader {
+    color: var(--primarycolor);
+    padding: 4px 2.5% 0px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+#featureShortContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.featureShortBlock {
+    width: 318px;
+    margin: 64px 18px 0px;
+}
+.featureShortBlockImg {
+    height: 32px;
+}
+.featureShortBlockTitle {
+    color: var(--primarycolor);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 12px 0px;
+}
+.featureShortBlockDesc {
+    color: var(--secondarycolor);
+    line-height: 1.6;
+}
 .featureSection {
     width: 100%;
     padding: 64px 0px ;
@@ -613,6 +647,15 @@ body {
     width: 480px;
     border-radius: 4px;
     box-shadow: 0px 6px 6px rgba(0,0,0,.33);
+}
+#faqHomeSection {
+    width: 1064px;
+    max-width: 95%;
+    margin: 32px auto 64px auto;
+    padding: 42px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
