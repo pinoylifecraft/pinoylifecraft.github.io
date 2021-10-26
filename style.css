@@ -506,7 +506,7 @@ body {
 #newsSection {
     background-color: var(--lightcolor);
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 84px;
 }
 #newsHeader {
     color: var(--primarycolor);
@@ -571,19 +571,17 @@ body {
     color: var(--secondarycolor);
 }
 #newsSeemore {
-    display: inline-block;
-    position: relative;
-    top: 48px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: table;
     font-size: 10px;
     font-weight: 700;
     color: var(--backuptext);
     text-decoration: none;
+    text-align: center;
+    margin: 42px auto auto auto;
 }
 .featureSection {
     width: 100%;
-    padding: 64px 0px;
+    padding: 64px 0px ;
 }
 .featureContainer {
     width: 1064px;
@@ -683,6 +681,9 @@ body {
         height: auto;
         flex-direction: column;
         padding: 0px 0px;
+    }
+    .featureContainerReverse {
+        flex-direction: column-reverse !important;
     }
     .featureTextContainer {
         width: 95%;
