@@ -741,23 +741,23 @@ body {
         width: 100%;
     }
     #navGame {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
     }
     #navSupport {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
     }
     #navDiscord {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
     }
     #navStore {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
     }
     #navVote {
-        font-size: 14px;
+        font-size: 12px;
         margin: 0px;
         font-weight: 500;
     }
