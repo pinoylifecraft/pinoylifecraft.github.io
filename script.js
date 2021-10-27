@@ -35,17 +35,17 @@ function mobilenavMenuFadein () {
     mobilenavMenuClose.style.animation = "NavMenuOpen .3s forwards"
     mobilenavMenuClose.style.visibility = "hidden"
     mobilenavLogo.style.visibility = "visible"
-    navList.style.left = "-250px"
+    navList.style.left = "-76%"
     mobilenavMenuBackground.style.display = "none"
 }
 
 // TRAILER (PLC SERVER)
 function trailerVideoOpen () {
-    aboutTrailerVideo.src = "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=1"
+    aboutTrailerVideo.setAttribute("src", "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=1")
     viewerBG1.style.display = "block"
 }
 function trailerVideoClose () {
-    aboutTrailerVideo.src = "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=0"
+    aboutTrailerVideo.setAttribute("src", "https://www.youtube.com/embed/ac5s6a5ZbWM?autoplay=0")
     viewerBG1.style.display = "none"
 }
 

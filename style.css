@@ -197,13 +197,51 @@ body {
     0% {visibility: hidden; opacity: 0;}
     100% {visibility: visible; opacity: 1;}
 }
-#footerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#footerSection {
     background-color: var(--backgroundcolor);
     width: 100%;
-    padding: 42px 32px;
+    padding: 64px 0px 42px;
+}
+#footerContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#footerNavigations {
+    display: flex;
+}
+.footerNavBlock {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.footerNavHeader {
+    color: var(--lightcolor);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.footerNavBlock a {
+    margin-top: 8px;
+    text-decoration: none;
+    color: var(--secondarycolor);
+}
+.footerNavBlock a:hover {
+    text-decoration: underline;
+}
+#footerMedias {
+    text-align: right;
+}
+.footerMediasLink {
+    margin: 0px 0px 8px 6px;
+}
+#footerCopyright {
+    color: var(--secondarycolor);
+    font-size: 13px;
+    font-weight: 500;
 }
 #homeBackgroundContainer {
     overflow: hidden;
@@ -689,9 +727,9 @@ body {
         flex-direction: column;
         padding: 32px 32px 100px 32px;
         top: 0px;
-        left: -250px;
+        left: -76%;
         height: 100vh;
-        width: 250px;
+        width: 75%;
         background-color: var(--backgroundcolor);
     }
     #navList1 {
@@ -701,10 +739,28 @@ body {
         flex-direction: column;
     }
     #navButton {
-        width: 186px;
+        width: 100%;
+    }
+    #navGame {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #navSupport {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #navDiscord {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #navStore {
+        font-size: 14px;
+        font-weight: 500;
     }
     #navVote {
+        font-size: 14px;
         margin: 0px;
+        font-weight: 500;
     }
     #homeContent {
         width: 84%;
@@ -786,6 +842,21 @@ body {
     }
     .featureShortBlockDesc {
         text-align: center;
+    }
+    #footerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #footerNavigations {
+        flex-direction: column;
+    }
+    .footerNavBlock {
+        margin-bottom: 32px;
+    }
+    #footerMedias {
+        text-align: center;
+        width: 100%;
+        margin-top: 64px;
     }
 }
 @media screen and (max-width: 360px) {
