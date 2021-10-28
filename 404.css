@@ -1,0 +1,395 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+:root {
+    --lightcolor: #f6f6f6;
+    --primarycolor: #2e3034;
+    --secondarycolor: #696969;
+    --backuptext: #1a5f96;
+    --backuptextlight: #1d73b9;
+    --backgroundcolor: #020711;
+}
+body {
+    background-color: var(--lightcolor);
+    color: var(--primarycolor);
+    overflow-x: hidden;
+}
+#splashScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgroundcolor);
+    position: fixed;
+    z-index: 9;
+}
+@keyframes splashScreen {
+    0% {height: 100vh;}
+    100% {height: 0vh; visibility: hidden;}
+}
+@keyframes splashScreenout {
+    0% {height: 0vh; visibility: visible;}
+    100% {height: 100vh;}
+}
+#splashScreenGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 46px 20px;
+    grid-row-gap: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#splashScreenLoadingAnimation {
+    margin: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+#splashScreenLoadingText {
+    font-size: 12px;
+    color: var(--lightcolor);
+}
+#navContainer {
+    width: 100%;
+    height: 80px;
+    padding-top: 19px;
+    background-color: var(--backgroundcolor);
+    position: relative;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#navList {
+    display: flex;
+    width: 86%;
+    height: 42px;
+    margin: auto;
+    justify-content: space-between;
+    z-index: 7;
+}
+#navList1 {
+    display: flex;
+    line-height: 42px;
+    list-style: none;
+}
+#navList2 {
+    display: flex;
+    line-height: 42px;
+    list-style: none;
+}
+#navLogo {
+    height: 36px;
+    margin: 3px 64px 3px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+#navGame {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+    margin-right: 64px;
+}
+#navSupport {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+    margin-right: 64px;
+}
+#navDiscord {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+    margin-right: 64px;
+}
+#navStore {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+}
+#navVote {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+    margin: 0px 64px;
+}
+#navGame:hover {
+    text-decoration: underline;
+}
+#navSupport:hover {
+    text-decoration: underline;
+}
+#navDiscord:hover {
+    text-decoration: underline;
+}
+#navStore:hover {
+    text-decoration: underline;
+}
+#navVote:hover {
+    text-decoration: underline;
+}
+#navButton {
+    padding: 2px;
+    height: 42px;
+    width: 128px;
+    background-color: var(--backuptextlight);
+    border-style: none;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--lightcolor);
+    text-decoration: none;
+    -webkit-appearance: button;
+    appearance: button;
+    text-align: center;
+}
+#navButton:hover {
+    background-color: var(--backuptext);
+    cursor: pointer;
+}
+#mobilenavLogo {
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    -webkit-user-select: none;
+    display: none;
+}
+#mobilenavMenuBackground {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+#mobilenavMenu {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+#mobilenavMenuClose {
+    position: fixed;
+    right: 24px;
+    top: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 8;
+}
+@keyframes NavMenuOpen {
+    0% {visibility: visible; opacity: 1;}
+    100% {visibility: hidden; opacity: 0;}
+}
+@keyframes NavMenuClose {
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+#footerSection {
+    background-color: var(--backgroundcolor);
+    width: 100%;
+    padding: 22px 0px 42px;
+}
+#footerContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#footerNavigations {
+    display: flex;
+}
+.footerNavBlock {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.footerNavHeader {
+    color: var(--lightcolor);
+    font-weight: 500;
+    margin: 42px 0px 10px;
+}
+.footerNavBlock a {
+    margin-top: 8px;
+    text-decoration: none;
+    color: #909090;
+}
+.footerNavBlock a:hover {
+    text-decoration: underline;
+}
+#footerMedias {
+    text-align: right;
+}
+.footerMediasLink {
+    margin: 0px 0px 8px 6px;
+}
+#footerCopyright {
+    color: #909090;
+    font-size: 13px;
+    font-weight: 500;
+}
+#home404Section {
+    width: 100%;
+}
+#home404Container {
+    width: 1064px;
+    max-width: 95%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0px;
+}
+#home404TextContainer {
+    width: 475px;
+}
+#home404Title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    color: var(--primarycolor);
+}
+#home404Desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondarycolor);
+    margin-bottom: 32px;
+}
+#home404Image {
+    height: 290px;
+    width: 480px;
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
+    margin-bottom: 26px;
+}
+#home404Button {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--lightcolor);
+    font-weight: 500;
+    background-color: var(--backuptextlight);
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 4px;
+}
+#home404Button:hover {
+    background-color: var(--backuptext);
+}
+@media screen and (max-width: 1032px) {
+    #splashScreenGrid {
+        top: 40%;
+        transform: translate(-50%, 0%);
+    }
+    #mobilenavLogo {
+        display: block;
+    }
+    #mobilenavMenu {
+        display: block;
+    }
+    #navList {
+        position: fixed;
+        flex-direction: column;
+        padding: 32px 32px 100px 32px;
+        top: 0px;
+        left: -76%;
+        height: 100vh;
+        width: 75%;
+        background-color: var(--backgroundcolor);
+    }
+    #navList1 {
+        flex-direction: column;
+    }
+    #navList2 {
+        flex-direction: column;
+    }
+    #navButton {
+        width: 100%;
+    }
+    #navGame {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #navSupport {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #navDiscord {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #navStore {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #navVote {
+        font-size: 12px;
+        margin: 0px;
+        font-weight: 500;
+    }
+    #footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #footerMedias {
+        text-align: center;
+        margin-top: 64px;
+    }
+    .footerNavHeader {
+        text-align: center;
+    }
+    .footerNavBlock a {
+        text-align: center;
+    }
+    #home404Container {
+        flex-direction: column;
+        height: auto;
+    }
+    #home404Image {
+        margin-bottom: 64px;
+        height: auto;
+    }
+    #home404TextContainer {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #home404Title {
+        text-align: center;
+    }
+    #home404Desc {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+}
+@media screen and (max-width: 744px) {
+    #footerNavigations {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footerNavHeader {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .footerNavBlock a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 360px) {
+}

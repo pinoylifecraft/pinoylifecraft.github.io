@@ -2,22 +2,101 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>404 Error - Pinoy LifeCraft</title>
+        <title>Error 404 (Not Found)</title>
         <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width", initial-scale=1.0>
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="style404.css">
+        <link rel="stylesheet" href="404.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta property="og:image" content="https://i.imgur.com/P4dOmQD.png"/>
+        <meta name="theme-color" content="#020711"/>
     </head>
     <body>
-        <div id="error404Container">
-            <p id="error404Title">404</p>
-            <img id="error404Player" src="resources/splash-screen/captainsprakle.png" alt="CaptainSparklez" title="Hello there, my name is CaptainSparklez. xD">
-            <p id="error404Subtitle">Error? Aww man! ♫ <br><br>Let's go back to home page, nothing's here nothing's there. (Aight 3x)</p>
-            <a href="index.html"><button id="error404Button">GO BACK HOME</button></a>
+        <div id="splashScreen">
+            <div id="splashScreenGrid">
+                <img src="resources/splash-screen/loading-animation.gif" alt="Downloading resources, please wait." id="splashScreenLoadingAnimation">
+                <p id="splashScreenLoadingText">Loading resources</p>
+            </div>
         </div>
+        <nav id="navContainer">
+            <div id="navList">
+                <ul id="navList1">
+                    <li><a href="https://pinoylifecraft.github.io/" title="Pinoy LifeCraft Home Page" onclick="splashScreenout()"><img id="navLogo" src="website-logo.png" alt="Pinoy LifeCraft Home Page Logo"></a></li>
+                    <li><a id="navGame" onclick="splashScreenout()" href="https://pinoylifecraft.github.io/gameinfo">GAME INFO</a></li>
+                    <li><a id="navSupport" onclick="splashScreenout()" href="https://pinoylifecraft.github.io/support">SUPPORT</a></li>
+                    <li><a id="navDiscord" onclick="splashScreenout()" href="https://discord.gg/BjtptVp">DISCORD</a></li>
+                    <li><a id="navStore" onclick="splashScreenout()" href="https://pinoylifecraft.github.io/store">STORE</a></li>
+                </ul>
+                <ul id="navList2">
+                    <li><a id="navVote" onclick="splashScreenout()" href="https://minecraft-mp.com/country/philippines/">VOTE</a></li>
+                    <li><a id="navButton" href="https://pinoylifecraft.github.io/play">PLAY NOW</a></li>
+                </ul>
+            </div>
+            <img id="mobilenavLogo" src="website-logo.png" alt="Pinoy LifeCraft Home Page Logo">
+            <svg width="32" height="32" id="mobilenavMenu" onclick="mobilenavMenuFadeout()" viewBox="0 0 32 32">
+                <circle opacity="0" cx="16" cy="16" r="16"></circle>
+                <path fill="#f6f6f6" d="M22 10v2H10v-2zm0 5v2H10v-2zm0 5v2H10v-2z"></path>
+            </svg>
+            <svg width="32" height="32" id="mobilenavMenuClose" onclick="mobilenavMenuFadein()" viewBox="0 0 32 32">
+                <circle opacity="0" cx="16" cy="16" r="16"></circle>
+                <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="#f6f6f6" stroke-width="2"></path>
+            </svg>
+            <div id="mobilenavMenuBackground" onclick="mobilenavMenuFadein()"></div>
+        </nav>
+        <div id="home404Section">
+            <div id="home404Container">
+                <img id="home404Image" src="https://i.kym-cdn.com/entries/icons/original/000/038/417/tableheader.jpg" alt="404 Image">
+                <div id="home404TextContainer">
+                    <p id="home404Title">Oh no! our table, it's broken!</p>
+                    <p id="home404Desc">
+                        That's 404 Error. It means that the link you just entered was wrong, corrupted or may have been removed.
+                        <br><br>Double check the link and try again.
+                    </p>
+                    <a id="home404Button" href="index.html" onclick="splashScreenout()">Well, the table broke.</a>
+                </div>
+            </div>
+        </div>
+        <div id="footerSection">
+            <div id="footerContainer">
+                <div id="footerNavigations">
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">ABOUT</p>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/">About us</a>
+                        <a onclick="splashScreenout()" href="https://www.minecraft.net/en-us">About Minecraft</a>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/play">Joining Server</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">SUPPORT</p>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/support">Report Bugs</a>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/support">Help Center</a>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/faq">FAQs</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">INFORMATION</p>
+                        <a onclick="splashScreenout()" href="https://www.facebook.com/pinoylifecraft/">Latest News</a>
+                        <a onclick="splashScreenout()" href="https://pinoylifecraft.github.io/wiki">Game Wiki</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">COMMUNITY</p>
+                        <a onclick="splashScreenout()" href="https://www.facebook.com/groups/pinoylifecraft">Facebook Group</a>
+                        <a onclick="splashScreenout()" href="https://discord.com/invite/BjtptVp">Discord Server</a>
+                        <a onclick="splashScreenout()" href="https://youtu.be/ac5s6a5ZbWM">Watch Trailer</a>
+                    </div>
+                </div>
+                <div id="footerMedias">
+                    <div id="footerMediasContainer">
+                        <a href="https://www.facebook.com/pinoylifecraft/" ><img class="footerMediasLink" src="resources/media-logo/facebooklogo.png" alt=""></a>
+                        <a href="https://youtube.com/pinoylifecraft" ><img class="footerMediasLink" src="resources/media-logo/youtubelogo.png" alt=""></a>
+                        <a href="tiktok.com/@minecraft.john727" ><img class="footerMediasLink" src="resources/media-logo/tiktoklogo.png" alt=""></a>
+                        <a href="https://discord.com/invite/BjtptVp" ><img class="footerMediasLink" src="resources/media-logo/discordlogo.png" alt=""></a>
+                    </div>
+                    <p id="footerCopyright">© 2015-2021, Team Pinoy LifeCraft</p>
+                </div>
+            </div>
+        </div>
+    <script src="index.js"></script>
     </body>
 </html>
