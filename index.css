@@ -769,6 +769,7 @@ body {
         font-size: 28px;
         font-weight: 600;
         line-height: 1.6;
+        width: 100%;
     }
     #homeContentButton {
         bottom: 13%;
@@ -873,10 +874,8 @@ body {
         width: 90%;
     }
     #homeContentTitle {
-        top: 30%;
         font-size: 24px;
         font-weight: 500;
-        line-height: 1.6;
     }
     #homeContentButton {
         bottom: 15%;
