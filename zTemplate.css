@@ -242,119 +242,6 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
-#playnowSection {
-    width: 100%;
-    background-image: url(https://www.minecraft.net/content/dam/games/minecraft/background-images/xplay-aquatic-bg.jpg);
-    background-position: top;
-    display: flex;
-    justify-content: center;
-    padding: 80px 0px;
-    box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-                 10px 20px 5px rgba(0,0,0,0.05),
-                 -10px 20px 5px rgba(0,0,0,0.05);
-}
-#playnowHeader {
-    color: var(--lightcolor);
-    font-size: 42px;
-    font-weight: 700;
-    text-align: center;
-    width: 760px;
-    max-width: 95%;
-    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-                 10px 20px 5px rgba(0,0,0,0.05),
-                 -10px 20px 5px rgba(0,0,0,0.05);
-}
-#playnowGuideSection {
-    width: 100%;
-    padding: 142px 0px 70px;
-}
-#playnowGuideContainer {
-    width: 1064px;
-    max-width: 95%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-#playnowGuideTextContainer {
-    width: 475px;
-}
-#playnowGuideTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 26px;
-    color: var(--primarycolor);
-}
-.playnowGuideSteps {
-    margin-bottom: 16px;
-    list-style: none;
-    counter-reset: steps-counter;
-}
-.playnowGuideStepsText {
-    counter-increment: steps-counter;
-    font-size: 14px;
-    color: var(--secondarycolor);
-    position: relative;
-    padding-left: 64px;
-    margin-bottom: 16px;
-    min-height: 48px;
-    height: auto;
-    line-height: 48px;
-}
-.playnowGuideStepsText::before {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    content: counter(steps-counter);
-    color: var(--lightcolor);
-    background-color: var(--secondarycolor);
-    font-size: 28px;
-    text-align: center;
-    line-height: 48px;
-    font-weight: bold;
-    height: 48px;
-    width: 48px;
-    border-radius: 4px;
-}
-.playnowGuideStepsText5::before {
-    background-color: var(--backuptextlight);
-}
-.playnowGuideStepsText5 {
-    color: var(--backuptextlight);
-}
-#playnowGuideImage {
-    height: 290px;
-    width: 480px;
-    max-width: 100%;
-    border-radius: 4px;
-    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
-}
-#playnowWarningContainer {
-    width: 1064px;
-    max-width: 95%;
-    margin: auto;
-    border-radius: 4px;
-    background-color: #FFFCD9;
-    padding: 42px 42px 42px 64px;
-    border-left: 6px solid #FBE900;
-}
-#playnowWarningMessage {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--primarycolor);
-    line-height: 1.6;
-}
-#playnowWarningMessage1 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--primarycolor);
-    line-height: 1.6;
-}
-#playnowWarningMessageLink {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--backuptextlight);
-    line-height: 1.6;
-}
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
         top: 40%;
@@ -420,32 +307,6 @@ body {
     .footerNavBlock a {
         text-align: center;
     }
-    #playnowHeader {
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 1.6;
-    }
-    #playnowGuideSection {
-        padding: 64px 0px;
-    }
-    #playnowGuideContainer {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    #playnowGuideTextContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #playnowGuideTitle {
-        margin-top: 64px;
-        text-align: center;
-    }
-    #playnowGuideImage {
-        max-width: 100%;
-        height: auto;
-    }
 }
 @media screen and (max-width: 744px) {
     #footerNavigations {
@@ -459,13 +320,6 @@ body {
     .footerNavBlock a {
         font-size: 14px;
     }
-    #playnowWarningContainer {
-        padding: 32px 16px 32px 32px;
-    }
 }
 @media screen and (max-width: 360px) {
-    #playnowHeader {
-        font-size: 24px;
-        font-weight: 500;
-    }
 }
