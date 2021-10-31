@@ -4,6 +4,8 @@ var mobilenavMenuClose = document.getElementById("mobilenavMenuClose")
 var navList = document.getElementById("navList")
 var mobilenavLogo = document.getElementById("mobilenavLogo")
 var mobilenavMenuBackground = document.getElementById("mobilenavMenuBackground")
+var playnowSolutionSection = document.getElementById("playnowSolutionSection")
+var playnowSolutionContainer = document.getElementById("playnowSolutionContainer")
 
 // PRE LOADER or SPLASH SCREEN
 window.addEventListener("load", function () {
@@ -30,4 +32,14 @@ function mobilenavMenuFadein () {
     mobilenavLogo.style.visibility = "visible"
     navList.style.left = "-76%"
     mobilenavMenuBackground.style.display = "none"
+}
+
+// PLAY NOW SOLUTIONS
+function playnowProblemOpen () {
+    playnowSolutionSection.style.display = "block"
+    playnowSolutionContainer.style.display = "block"
+}
+function playnowProblemClose () {
+    playnowSolutionSection.style.display = "none"
+    playnowSolutionContainer.style.display = "none"
 }

@@ -73,8 +73,59 @@
         <div id="playnowProblemSection">
             <p id="playnowProblemTitle">Did you encounter problem when joining?</p>
             <p id="playnowProblemDesc">It is possible that you will be unable to connect to the server at any time. There could be a variety of reasons for this. We have a list of problems and a solution you might be having.</p>
-            <button id="playnowProblemOpenButton">Open Solution</button>
+            <button id="playnowProblemOpenButton" onclick="playnowProblemOpen()">Open Solution</button>
             <a href="faq.html" id="playnowProblemFAQ">See more FAQs</a>
+        </div>
+        <div id="playnowSolutionSection" onclick="playnowProblemClose()"></div>
+        <div id="playnowSolutionContainer">
+            <div id="playnowSolutionHeader">
+                <div id="playnowSolutionHeaderContainer">
+                    <img src="resources/features-icon/commonissueicon.png" alt="Common Issues Icon">
+                    <p id="playnowSolutionTitle">Common Issues</p>
+                </div>
+                <p id="playnowSolutionClose" onclick="playnowProblemClose()">&times;</p>
+            </div>
+            <div id="playnowSolutionSolutions">
+                <p class="playnowSolutionSolutionsTitle">You did not accept server's resourcepack</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you followed the steps on how to join the server there should be no problem, or this is.
+                    Commonly it is because of a Minecraft bug. To fix this, delete the current server and make a new one.
+                    If it didn't fix the problem, go join our Discord server. We have a lot of people to help you there.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your account has been banned</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    When you break one of our rules, you will be banned automatically or manually.
+                    You may want to look at our support page about how to (possibly) get unbanned.
+                    Also please follow rules to avoid getting banned. You can find rules at game info page.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your username is incorrect or already owned</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    That happens a lot, specially to piso net players. They often forget their username.
+                    Go restart Minecraft and make sure that the username is correct.
+                    If already owned username it is common sense to try other username that is not owned by others.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your internet connection speed is slow​</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    In many cases, players' internet connection speeds are insufficient, making it difficult to join our server.
+                    Usually, simply resetting your router will solve the problem.
+                    If you're still having trouble connecting to the server, try unplugging any other devices
+                    that might be limiting your internet access.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Outdated Version​</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you get a message that your launcher is out of date,
+                    you'll need to restart it and update to one of our compatible versions.
+                    We hope you have a good time playing all of our games. If you need more
+                    assistance, please go to website's support pages or join our Discord server.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Server maintenance or offline</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you receive a message stating that the server is under maintenance,
+                    it means that no one can connect at that time. Please wait and try connecting
+                    again later. If it said offline, go contact us to notify the staffs about the
+                    what happened.
+                </p>
+            </div>
         </div>
         <div id="footerSection">
             <div id="footerContainer">
