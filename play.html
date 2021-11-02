@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Connect & Play > Pinoy LifeCraft</title>
+        <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="play.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta property="og:image" content="https://i.imgur.com/P4dOmQD.png"/>
+        <meta name="theme-color" content="#020711"/>
+    </head>
+    <body>
+        <div id="splashScreen">
+            <div id="splashScreenGrid">
+                <img src="resources/splash-screen/loading-animation.gif" alt="Downloading resources, please wait." id="splashScreenLoadingAnimation">
+                <p id="splashScreenLoadingText">Loading resources</p>
+            </div>
+        </div>
+        <nav id="navContainer">
+            <div id="navList">
+                <ul id="navList1">
+                    <li><a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index"><img id="navLogo" src="website-logo.png" alt="Pinoy LifeCraft Home Page Logo"></a></li>
+                    <li><a id="navGame" onclick="splashScreenout()" href="gameinfo">GAME INFO</a></li>
+                    <li><a id="navSupport" onclick="splashScreenout()" href="support">SUPPORT</a></li>
+                    <li><a id="navDiscord" onclick="splashScreenout()" href="https://discord.gg/BjtptVp">DISCORD</a></li>
+                    <li><a id="navStore" onclick="splashScreenout()" href="store">STORE</a></li>
+                </ul>
+                <ul id="navList2">
+                    <li><a id="navVote" onclick="splashScreenout()" href="vote">VOTE</a></li>
+                    <li><a id="navButton" onclick="splashScreenout()" href="play">PLAY NOW</a></li>
+                </ul>
+            </div>
+            <img id="mobilenavLogo" src="website-logo.png" alt="Pinoy LifeCraft Home Page Logo">
+            <svg width="32" height="32" id="mobilenavMenu" onclick="mobilenavMenuFadeout()" viewBox="0 0 32 32">
+                <circle opacity="0" cx="16" cy="16" r="16"></circle>
+                <path fill="#f6f6f6" d="M22 10v2H10v-2zm0 5v2H10v-2zm0 5v2H10v-2z"></path>
+            </svg>
+            <svg width="32" height="32" id="mobilenavMenuClose" onclick="mobilenavMenuFadein()" viewBox="0 0 32 32">
+                <circle opacity="0" cx="16" cy="16" r="16"></circle>
+                <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="#f6f6f6" stroke-width="2"></path>
+            </svg>
+            <div id="mobilenavMenuBackground" onclick="mobilenavMenuFadein()"></div>
+        </nav>
+        <div id="playnowSection">
+            <p id="playnowHeader">Connect and Join The Filipino Minecraft Server</p>
+        </div>
+        <div id="playnowGuideSection">
+            <div id="playnowGuideContainer">
+                <div id="playnowGuideTextContainer">
+                    <p id="playnowGuideTitle">EASY AND PLAY FREE</p>
+                    <ol class="playnowGuideSteps">
+                        <li class="playnowGuideStepsText">Open up Minecraft and navigate to the Multiplayer Menu</li>
+                        <li class="playnowGuideStepsText">Click on the "Add Server" button</li>
+                        <li class="playnowGuideStepsText">Enter play.pinoylifecraft.com as the server IP</li>
+                        <li class="playnowGuideStepsText">Make sure to select Server Resource Packs: Enabled</li>
+                        <li class="playnowGuideStepsText playnowGuideStepsText5">Press Done and Connect to start playing!</li>
+                    </ol>
+                </div>
+                <img id="playnowGuideImage" src="https://i.imgur.com/gEZADY1.png" alt="404 Image">
+            </div>
+        </div>
+        <div id="playnowWarningContainer">
+            <p id="playnowWarningMessage">
+                You don't need a Minecraft Java account to play Pinoy LifeCraft, we do this so that everyone can play.
+                <br><br><p id="playnowWarningMessage1">Buy Minecraft if you can afford 1,400 pesos, you can purchase one of these from the <a href="https://www.minecraft.net/en-us/store/minecraft-java-edition" target="_blank" rel="noopener noreferrer" id="playnowWarningMessageLink">official website</a>.</p>
+            </p>
+        </div>
+        <div id="playnowProblemSection">
+            <p id="playnowProblemTitle">Did you encounter problem when joining?</p>
+            <p id="playnowProblemDesc">It is possible that you will be unable to connect to the server at any time. There could be a variety of reasons for this. We have a list of problems and a solution you might be having.</p>
+            <button id="playnowProblemOpenButton" onclick="playnowProblemOpen()">Open Solution</button>
+            <a href="faq" id="playnowProblemFAQ">See more FAQs</a>
+        </div>
+        <div id="playnowSolutionSection" onclick="playnowProblemClose()"></div>
+        <div id="playnowSolutionContainer">
+            <div id="playnowSolutionHeader">
+                <div id="playnowSolutionHeaderContainer">
+                    <img src="resources/features-icon/commonissueicon.png" alt="Common Issues Icon">
+                    <p id="playnowSolutionTitle">Common Issues</p>
+                </div>
+                <p id="playnowSolutionClose" onclick="playnowProblemClose()">&times;</p>
+            </div>
+            <div id="playnowSolutionSolutions">
+                <p class="playnowSolutionSolutionsTitle">You did not accept server's resourcepack</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you followed the steps on how to join the server there should be no problem, or this is.
+                    Commonly it is because of a Minecraft bug. To fix this, delete the current server and make a new one.
+                    If it didn't fix the problem, go join our Discord server. We have a lot of people to help you there.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your account has been banned</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    When you break one of our rules, you will be banned automatically or manually.
+                    You may want to look at our support page about how to (possibly) get unbanned.
+                    Also please follow rules to avoid getting banned. You can find rules at game info page.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your username is incorrect or already owned</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    That happens a lot, specially to piso net players. They often forget their username.
+                    Go restart Minecraft and make sure that the username is correct.
+                    If already owned username it is common sense to try other username that is not owned by others.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Your internet connection speed is slow​</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    In many cases, players' internet connection speeds are insufficient, making it difficult to join our server.
+                    Usually, simply resetting your router will solve the problem.
+                    If you're still having trouble connecting to the server, try unplugging any other devices
+                    that might be limiting your internet access.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Outdated Version​</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you get a message that your launcher is out of date,
+                    you'll need to restart it and update to one of our compatible versions.
+                    We hope you have a good time playing all of our games. If you need more
+                    assistance, please go to website's support pages or join our Discord server.
+                </p>
+                <p class="playnowSolutionSolutionsTitle">Server maintenance or offline</p>
+                <p class="playnowSolutionSolutionsDesc">
+                    If you receive a message stating that the server is under maintenance,
+                    it means that no one can connect at that time. Please wait and try connecting
+                    again later. If it said offline, go contact us to notify the staffs about the
+                    what happened.
+                </p>
+            </div>
+        </div>
+        <div id="footerSection">
+            <div id="footerContainer">
+                <div id="footerNavigations">
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">ABOUT</p>
+                        <a onclick="splashScreenout()" href="index">About us</a>
+                        <a onclick="splashScreenout()" href="https://www.minecraft.net/en-us">About Minecraft</a>
+                        <a onclick="splashScreenout()" href="play">Joining Server</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">SUPPORT</p>
+                        <a onclick="splashScreenout()" href="support">Report Bugs</a>
+                        <a onclick="splashScreenout()" href="support">Help Center</a>
+                        <a onclick="splashScreenout()" href="faq">FAQs</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">INFORMATION</p>
+                        <a onclick="splashScreenout()" href="https://www.facebook.com/pinoylifecraft/">Latest News</a>
+                        <a onclick="splashScreenout()" href="wiki">Game Wiki</a>
+                    </div>
+                    <div class="footerNavBlock">
+                        <p class="footerNavHeader">COMMUNITY</p>
+                        <a onclick="splashScreenout()" href="https://www.facebook.com/groups/pinoylifecraft">Facebook Group</a>
+                        <a onclick="splashScreenout()" href="https://discord.com/invite/BjtptVp">Discord Server</a>
+                        <a onclick="splashScreenout()" href="https://youtu.be/ac5s6a5ZbWM">Watch Trailer</a>
+                    </div>
+                </div>
+                <div id="footerMedias">
+                    <div id="footerMediasContainer">
+                        <a href="https://www.facebook.com/pinoylifecraft/" ><img class="footerMediasLink" src="resources/media-logo/facebooklogo.png" alt="Facebook" title="Facebook"></a>
+                        <a href="https://youtube.com/pinoylifecraft" ><img class="footerMediasLink" src="resources/media-logo/youtubelogo.png" alt="YouTube" title="YouTube"></a>
+                        <a href="tiktok.com/@minecraft.john727" ><img class="footerMediasLink" src="resources/media-logo/tiktoklogo.png" alt="TikTok" title="TikTok"></a>
+                        <a href="https://discord.com/invite/BjtptVp" ><img class="footerMediasLink" src="resources/media-logo/discordlogo.png" alt="Discord" title="Discord"></a>
+                    </div>
+                    <p id="footerCopyright">© 2015-2021, Team Pinoy LifeCraft</p>
+                </div>
+            </div>
+        </div>
+    <script src="play.js"></script>
+    </body>
+</html>
