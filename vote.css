@@ -54,11 +54,12 @@ body {
     color: var(--lightcolor);
 }
 #navContainer {
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 80px;
     padding-top: 19px;
     background-color: var(--backgroundcolor);
-    position: relative;
     z-index: 6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -299,7 +300,7 @@ body {
     max-width: 95%;
     margin: auto;
 }
-#voteSitesLink1 {
+.voteSitesLink {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,79 +310,62 @@ body {
     font-size: 16px;
     font-weight: 500;
     padding: 24px;
-    color: var(--lightcolor);
+    color: var(--backuptextlight);
     text-decoration: none;
     border-radius: 4px;
-    background: var(--backuptextlight);
-    background: linear-gradient(to right, var(--backuptext), var(--backuptextlight));
+    background: var(--lightcolor);
     box-shadow: 0px 6px 6px rgba(0,0,0,.33);
     transition: transform .2s;
 }
-#voteSitesLink1:hover {
+.voteSitesLink:hover {
     transform: scale(1.02);
+    color: var(--lightcolor);
+    background: var(--backuptextlight);
 }
-#voteSitesLink2 {
+#voteSupportSection {
+    width: 760px;
+    max-width: 95%;
+    margin: 64px auto;
+    padding: 42px 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 22px 18px;
-    height: 64px;
-    width: 224px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 24px;
-    color: var(--lightcolor);
-    text-decoration: none;
-    border-radius: 4px;
-    background: var(--backuptextlight);
-    background: linear-gradient(to right, var(--backuptext), var(--backuptextlight));
-    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
-    transition: transform .2s;
 }
-#voteSitesLink2:hover {
-    transform: scale(1.02);
+#voteSupportTitle {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 26px;
+    color: var(--primarycolor);
+    text-align: center;
 }
-#voteSitesLink3 {
+#voteSupportDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondarycolor);
+    text-align: center;
+    padding-bottom: 64px;
+}
+#voteSupportButton {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 22px 18px;
-    height: 64px;
-    width: 224px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 24px;
-    color: var(--lightcolor);
-    text-decoration: none;
-    border-radius: 4px;
-    background: var(--backuptextlight);
-    background: linear-gradient(to right, var(--backuptext), var(--backuptextlight));
-    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
-    transition: transform .2s;
-}
-#voteSitesLink3:hover {
-    transform: scale(1.02);
-}
-#voteSitesLink4 {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 22px 18px;
-    height: 64px;
-    width: 224px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 24px;
-    color: var(--lightcolor);
     text-decoration: none;
+    background-color: var(--backuptextlight);
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    width: 250px;
+    color: var(--lightcolor);
     border-radius: 4px;
-    background: var(--backuptextlight);
-    background: linear-gradient(to right, var(--backuptext), var(--backuptextlight));
-    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
-    transition: transform .2s;
 }
-#voteSitesLink4:hover {
-    transform: scale(1.02);
+#voteSupportButton:hover {
+    background-color: var(--backuptext);
+    cursor: pointer;
+}
+#voteSupportDonate {
+    font-size: 14px;
+    color: var(--backuptext);
+    margin-top: 16px;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -448,6 +432,11 @@ body {
     .footerNavBlock a {
         text-align: center;
     }
+    #voteHeaderText {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.6;
+    }
 }
 @media screen and (max-width: 744px) {
     #footerNavigations {
@@ -461,6 +450,18 @@ body {
     .footerNavBlock a {
         font-size: 14px;
     }
+    #voteSitesContainer {
+        flex-direction: column;
+        align-content: center;
+    }
+    .voteSitesLink {
+        width: 97%;
+        margin: 8px 0px;
+    }
 }
 @media screen and (max-width: 360px) {
+    #voteHeaderText {
+        font-size: 24px;
+        font-weight: 500;
+    }
 }
