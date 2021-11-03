@@ -54,11 +54,12 @@ body {
     color: var(--lightcolor);
 }
 #navContainer {
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 80px;
     padding-top: 19px;
     background-color: var(--backgroundcolor);
-    position: relative;
     z-index: 6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -242,54 +243,67 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
-#home404Section {
+#error404HeaderSection {
     width: 100%;
-}
-#home404Container {
-    width: 1064px;
-    max-width: 95%;
-    height: 90vh;
-    margin: auto;
+    background-image: url(https://www.minecraft.net/content/dam/games/minecraft/background-images/xplay-aquatic-bg.jpg);
+    background-position: top;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 80px 0px;
+    box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+#error404HeaderText {
+    color: var(--lightcolor);
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    width: 760px;
+    max-width: 95%;
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+#error404TipSection {
+    width: 760px;
+    max-width: 95%;
+    margin: 64px auto;
+    padding: 80px 15px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 100px 0px;
 }
-#home404TextContainer {
-    width: 475px;
-}
-#home404Title {
+#error404TipTitle {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 26px;
+    padding-bottom: 26px;
     color: var(--primarycolor);
+    text-align: center;
 }
-#home404Desc {
+#error404TipDesc {
     font-size: 14px;
     line-height: 1.6;
     color: var(--secondarycolor);
-    margin-bottom: 32px;
+    text-align: center;
+    padding-bottom: 74px;
 }
-#home404Image {
-    height: 290px;
-    width: 480px;
-    max-width: 100%;
-    border-radius: 4px;
-    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
-    margin-bottom: 26px;
-}
-#home404Button {
-    display: inline-block;
-    font-size: 14px;
-    color: var(--lightcolor);
-    font-weight: 500;
+#error404TipButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--backuptextlight);
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
-    padding: 16px 36px;
+    height: 50px;
+    width: 250px;
+    color: var(--lightcolor);
     border-radius: 4px;
 }
-#home404Button:hover {
+#error404TipButton:hover {
     background-color: var(--backuptext);
+    cursor: pointer;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -356,26 +370,10 @@ body {
     .footerNavBlock a {
         text-align: center;
     }
-    #home404Container {
-        flex-direction: column;
-        height: auto;
-    }
-    #home404Image {
-        margin-bottom: 64px;
-        height: auto;
-    }
-    #home404TextContainer {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #home404Title {
-        text-align: center;
-    }
-    #home404Desc {
-        text-align: center;
-        margin-bottom: 64px;
+    #error404HeaderText {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.6;
     }
 }
 @media screen and (max-width: 744px) {
@@ -392,4 +390,8 @@ body {
     }
 }
 @media screen and (max-width: 360px) {
+    #error404HeaderText {
+        font-size: 24px;
+        font-weight: 500;
+    }
 }
