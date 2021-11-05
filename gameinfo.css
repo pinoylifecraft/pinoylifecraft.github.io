@@ -243,7 +243,7 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
-#voteHeaderSection {
+#gameinfoHeaderSection {
     width: 100%;
     background-image: url(https://www.minecraft.net/content/dam/games/minecraft/background-images/xplay-aquatic-bg.jpg);
     background-position: top;
@@ -254,7 +254,7 @@ body {
                  10px 20px 5px rgba(0,0,0,0.05),
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
-#voteHeaderText {
+#gameinfoHeaderText {
     color: var(--lightcolor);
     font-size: 42px;
     font-weight: 700;
@@ -288,67 +288,39 @@ body {
 #voteSitesMessageDesc {
     font-size: 14px;
     line-height: 1.6;
-    padding-bottom: 100px;
+    padding-bottom: 64px;
     color: var(--secondarycolor);
     text-align: center;
 }
 #voteSitesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 1064px;
     max-width: 95%;
     margin: auto;
+}
+.voteSitesLink {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-#voteSitesListContainer {
-    width: 475px;
-}
-.voteSitesLists {
-    margin-bottom: 16px;
-    list-style: none;
-    counter-reset: steps-counter;
-}
-.voteSitesListsLink {
-    counter-increment: steps-counter;
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--secondarycolor);
-    position: relative;
-    padding-left: 64px;
-    margin-bottom: 16px;
-    height: auto;
-    line-height: 48px;
-}
-.voteSitesListsLink::before {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    content: counter(steps-counter);
-    color: var(--lightcolor);
-    background-color: var(--backuptextlight);
-    font-size: 28px;
-    text-align: center;
-    line-height: 48px;
-    font-weight: bold;
-    height: 48px;
-    width: 48px;
-    border-radius: 4px;
-}
-.voteSitesListsLink a {
-    font-weight: normal;
+    justify-content: center;
+    margin: 22px 18px;
+    height: 64px;
+    width: 224px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 24px;
     color: var(--backuptextlight);
     text-decoration: none;
-}
-.voteSitesListsLink a:hover {
-    color: var(--backuptext);
-    text-decoration: underline;
-}
-#playnowGuideImage {
-    height: 290px;
-    width: 480px;
-    max-width: 100%;
     border-radius: 4px;
+    background: var(--lightcolor);
     box-shadow: 0px 6px 6px rgba(0,0,0,.33);
+    transition: transform .2s;
+}
+.voteSitesLink:hover {
+    transform: scale(1.02);
+    color: var(--lightcolor);
+    background: var(--backuptextlight);
 }
 #voteSupportSection {
     width: 760px;
@@ -460,24 +432,10 @@ body {
     .footerNavBlock a {
         text-align: center;
     }
-    #voteHeaderText {
+    #gameinfoHeaderText {
         font-size: 28px;
         font-weight: 600;
         line-height: 1.6;
-    }
-    #voteSitesContainer {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    #voteSitesListContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #playnowGuideImage {
-        max-width: 100%;
-        height: auto;
     }
 }
 @media screen and (max-width: 744px) {
@@ -502,7 +460,7 @@ body {
     }
 }
 @media screen and (max-width: 360px) {
-    #voteHeaderText {
+    #gameinfoHeaderText {
         font-size: 24px;
         font-weight: 500;
     }
