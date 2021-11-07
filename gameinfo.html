@@ -27,7 +27,7 @@
                     <li><a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index"><img id="navLogo" src="website-logo.png" alt="Pinoy LifeCraft Home Page Logo"></a></li>
                     <li><a id="navGame" onclick="splashScreenout()" href="gameinfo">GAME INFO</a></li>
                     <li><a id="navSupport" onclick="splashScreenout()" href="support">SUPPORT</a></li>
-                    <li><a id="navDiscord" onclick="splashScreenout()" href="https://discord.gg/BjtptVp">DISCORD</a></li>
+                    <li><a id="navDiscord" onclick="splashScreenout()" href="forums">FORUMS</a></li>
                     <li><a id="navStore" onclick="splashScreenout()" href="store">STORE</a></li>
                 </ul>
                 <ul id="navList2">
@@ -49,34 +49,87 @@
         <div id="gameinfoHeaderSection">
             <p id="gameinfoHeaderText">Server Game Information</p>
         </div>
-        <div id="voteSitesSection">
-            <div id="voteSitesMessageContainer">
-                <p id="voteSitesMessageTitle">How does voting work and support the server?</p>
-                <p id="voteSitesMessageDesc">
-                    Select one of the voting sites below to support and earn epic rewards.
-                    You helped us go on the top and advertised to people for voting the server.
-                    When on site just enter your username and press vote to get chance to
-                    win loot points, Personal Multipliers and even special diamond!
-                </p>
+        <div id="aboutSection">
+            <div id="aboutContainer">
+                <div id="aboutTrailer">
+                    <img id="aboutTrailerThumbnail" src="https://i.imgur.com/9ww4Meb.png" alt="Trailer">
+                    <p id="aboutTrailerWatchtext">WATCH THE TRAILER</p>
+                    <div id="aboutTrailerButton" onclick="trailerVideoOpen()" title="Play video">
+                        <svg id="aboutTrailerPlayButton" viewBox="0, 0, 400,480">
+                            <g>
+                                <path d="M0.000 20.000 L 0.000 40.000 39.145 40.000 L 78.291 40.000 79.345 41.055 L 80.400 42.109 80.400 60.426 C 80.400 76.544,80.475 78.818,81.029 79.371 C 81.591 79.934,85.674 80.000,119.974 80.000 L 158.291 80.000 159.345 81.055 L 160.400 82.109 160.400 100.426 C 160.400 116.544,160.475 118.818,161.029 119.371 C 161.591 119.934,165.674 120.000,199.974 120.000 L 238.291 120.000 239.345 121.055 L 240.400 122.109 240.400 140.426 C 240.400 156.544,240.475 158.818,241.029 159.371 C 241.591 159.934,245.674 160.000,279.974 160.000 L 318.291 160.000 319.345 161.055 L 320.400 162.109 320.400 180.426 C 320.400 196.544,320.475 198.818,321.029 199.371 C 321.591 199.934,325.752 200.000,360.829 200.000 L 400.000 200.000 400.000 100.000 L 400.000 0.000 200.000 0.000 L 0.000 0.000 0.000 20.000 M320.880 320.880 C 320.521 321.239,320.400 325.992,320.400 339.805 L 320.400 358.250 319.278 359.325 L 318.156 360.400 279.758 360.400 C 250.426 360.400,241.247 360.513,240.880 360.880 C 240.521 361.239,240.400 365.992,240.400 379.805 L 240.400 398.250 239.278 399.325 L 238.156 400.400 199.758 400.400 C 170.426 400.400,161.247 400.513,160.880 400.880 C 160.521 401.239,160.400 405.982,160.400 419.758 L 160.400 438.156 159.325 439.278 L 158.250 440.400 119.805 440.400 C 90.437 440.400,81.247 440.513,80.880 440.880 C 80.520 441.240,80.400 446.187,80.400 460.680 L 80.400 480.000 240.200 480.000 L 400.000 480.000 400.000 400.200 L 400.000 320.400 360.680 320.400 C 330.631 320.400,321.247 320.513,320.880 320.880 "
+                                fill="none" fill-rule="evenodd"></path>
+                                <path d="M320.880 280.880 C 320.521 281.239,320.400 285.992,320.400 299.805 L 320.400 318.250 319.278 319.325 L 318.156 320.400 279.758 320.400 C 250.426 320.400,241.247 320.513,240.880 320.880 C 240.521 321.239,240.400 325.992,240.400 339.805 L 240.400 358.250 239.278 359.325 L 238.156 360.400 199.758 360.400 C 170.426 360.400,161.247 360.513,160.880 360.880 C 160.521 361.239,160.400 365.982,160.400 379.758 L 160.400 398.156 159.325 399.278 L 158.250 400.400 119.805 400.400 C 90.437 400.400,81.247 400.513,80.880 400.880 C 80.521 401.239,80.400 405.992,80.400 419.805 L 80.400 438.250 79.278 439.325 L 78.156 440.400 39.078 440.400 L 0.000 440.400 0.000 460.200 L 0.000 480.000 40.200 480.000 L 80.400 480.000 80.400 460.680 C 80.400 446.187,80.520 441.240,80.880 440.880 C 81.247 440.513,90.437 440.400,119.805 440.400 L 158.250 440.400 159.325 439.278 L 160.400 438.156 160.400 419.758 C 160.400 405.982,160.521 401.239,160.880 400.880 C 161.247 400.513,170.437 400.400,199.805 400.400 L 238.250 400.400 239.325 399.278 L 240.400 398.156 240.400 379.758 C 240.400 365.982,240.521 361.239,240.880 360.880 C 241.247 360.513,250.426 360.400,279.758 360.400 L 318.156 360.400 319.278 359.325 L 320.400 358.250 320.400 339.805 C 320.400 325.992,320.521 321.239,320.880 320.880 C 321.247 320.513,330.631 320.400,360.680 320.400 L 400.000 320.400 400.000 300.400 L 400.000 280.400 360.680 280.400 C 330.631 280.400,321.247 280.513,320.880 280.880 "
+                                fill="rgba(0, 0, 0, 0.25)" fill-rule="evenodd"></path>
+                                <path d="M0.000 240.200 L 0.000 440.400 39.078 440.400 L 78.156 440.400 79.278 439.325 L 80.400 438.250 80.400 419.805 C 80.400 405.992,80.521 401.239,80.880 400.880 C 81.247 400.513,90.426 400.400,119.758 400.400 L 158.156 400.400 159.278 399.325 L 160.400 398.250 160.400 379.805 C 160.400 365.992,160.521 361.239,160.880 360.880 C 161.247 360.513,170.426 360.400,199.758 360.400 L 238.156 360.400 239.278 359.325 L 240.400 358.250 240.400 339.805 C 240.400 325.992,240.521 321.239,240.880 320.880 C 241.247 320.513,250.437 320.400,279.805 320.400 L 318.250 320.400 319.325 319.278 L 320.400 318.156 320.400 299.758 C 320.400 285.982,320.521 281.239,320.880 280.880 C 321.247 280.513,330.631 280.400,360.680 280.400 L 400.000 280.400 400.000 240.200 L 400.000 200.000 360.829 200.000 C 325.752 200.000,321.591 199.934,321.029 199.371 C 320.475 198.818,320.400 196.544,320.400 180.426 L 320.400 162.109 319.345 161.055 L 318.291 160.000 279.974 160.000 C 245.674 160.000,241.591 159.934,241.029 159.371 C 240.475 158.818,240.400 156.544,240.400 140.426 L 240.400 122.109 239.345 121.055 L 238.291 120.000 199.974 120.000 C 165.674 120.000,161.591 119.934,161.029 119.371 C 160.475 118.818,160.400 116.544,160.400 100.426 L 160.400 82.109 159.345 81.055 L 158.291 80.000 119.974 80.000 C 85.674 80.000,81.591 79.934,81.029 79.371 C 80.475 78.818,80.400 76.544,80.400 60.426 L 80.400 42.109 79.345 41.055 L 78.291 40.000 39.145 40.000 L 0.000 40.000 0.000 240.200 "
+                                fill="#fff" fill-rule="evenodd"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>  
+                <div id="aboutTextContainer">
+                    <p id="aboutTitle">What is Pinoy LifeCraft?</p>
+                    <p id="aboutDesc">Pinoy LifeCraft is a massive multiplayer online role playing game enhance Minecraft: Java Edition server.
+                        Minecrafters team up with online friends to survive, build, explore, fight the enemies and have fun using their chosen role.
+                    <br><br>Whether you are building up your base, exploring the server worlds or completing game or daily quests, we have something for everyone here on Pinoy LifeCraft!</p>
+                </div>
             </div>
-            <div id="voteSitesContainer">
-                <a href="https://minecraft-mp.com/country/philippines/"
-                target="_blank" rel="noopener noreferrer" class="voteSitesLink">Minecraft-MP</a>
-                <a href="https://minecraft-mp.com/country/philippines/"
-                target="_blank" rel="noopener noreferrer" class="voteSitesLink">Top Minecraft Servers</a>
-                <a href="https://minecraft-mp.com/country/philippines/"
-                target="_blank" rel="noopener noreferrer" class="voteSitesLink">Minecraft Servers</a>
-                <a href="https://minecraft-mp.com/country/philippines/"
-                target="_blank" rel="noopener noreferrer" class="voteSitesLink">Top G</a>
+            <div class="viewerBG" onclick="trailerVideoClose()">
+                <svg width="32" height="32" class="viewerBGClose" viewBox="0 0 32 32" title="Close">
+                    <title>Close</title>
+                    <circle opacity=".1" fill="var(--lightcolor)" cx="16" cy="16" r="16"></circle>
+                    <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="var(--lightcolor)" stroke-width="2"></path>
+                </svg>
+                <iframe id="aboutTrailerVideo" src="https://www.youtube.com/embed/ac5s6a5ZbWM"
+                frameborder="0" allowfullscreen title="Pinoy LifeCraft Trailer" allow="autoplay"></iframe>
             </div>
         </div>
-        <div id="voteSupportSection">
-            <p id="voteSupportTitle">You can also support us through store!</p>
-            <p id="voteSupportDesc">
-                Buy ranks, accessories or special diamond or help us with your donation :3
-            </p>
-            <a href="store" id="voteSupportButton">Shop Now</a>
-            <a href="donate" id="voteSupportDonate">Donate Us</a>
+        <div id="gameinfoNavContainer">
+            <div id="gameinfoNav1">
+                <button class="gameinfoNavButtons gameinfoNavButtonsActive">Features</button>
+                <button class="gameinfoNavButtons">Maps</button>
+                <button class="gameinfoNavButtons">FAQs</button>
+                <button class="gameinfoNavButtons">Staff</button>
+            </div>
+            <div id="gameinfoNav2">
+                <button id="gameinfoNavButtonsRules">Rules</button>
+            </div>
+        </div>
+        <div id="gameinfoIframeContainer">
+            <iframe src="https://pinoylifecraft.github.io/" frameborder="0"></iframe>
+        </div>
+        <div id="newsSection">
+            <p id="newsHeader">LATEST NEWS</p>
+            <div id="newsContainer">
+                <div>
+                    <a href="pinoylifecraft.github.io">
+                        <img class="newsImage" src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/92780594_1538276313017394_1547665098309369856_n.png?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=J0BjSDMlIsoAX8_C8fP&_nc_ht=scontent.fceb2-1.fna&oh=0e5f88dcf89841e5f8c34a055773c3a0&oe=6192F3EE" alt="•_•">
+                    </a>
+                    <p class="newsTitle">JOIN OUR DISCORD: CLICK TO JOIN INSTANTLY.</p>
+                    <span class="newsTagAnnouncement">ANNOUNCEMENT</span><span class="newsDate">October 1, 2021</span>
+                </div>
+                <div id="newsImage2">
+                    <a href="https://www.facebook.com/pinoylifecraft/photos/a.344317312413306/862187837292915/">
+                        <img class="newsImage" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/21557994_862187837292915_9197230270789123651_n.png?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFjZcfoRxLGfR_UsSjw4NWAIvriSsofkxci-uJKyh-TF0kBYwDezvdToEm0L42JS9Mjh1HvJ-cblq352TUABcBs&_nc_ohc=wARn-fwlp0gAX9Nq0P4&_nc_ht=scontent.fceb2-2.fna&oh=2d7aa265740e385ff59af764aa520dcb&oe=619AC145" alt="•_•">
+                    </a>
+                    <p class="newsTitle">FRESH, MINIMAL AND NEW SERVER HUB</p>
+                    <span class="newsTagServer">SERVER</span><span class="newsDate">October 1, 2021</span>
+                </div>
+                <div>
+                    <a href="pinoylifecraft.github.io">
+                        <img class="newsImage" src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.18169-9/20155851_831042933740739_2637259529348962852_n.png?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEglnZwAlvl1DgJCI_Eg3i-JqiaFCS6WNUmqJoUJLpY1e7vOTHRo7ASIhHHZwHE9t27x8Txp_UhGwR6RojKq259&_nc_ohc=1PU4gBZ2WzEAX8DnJTF&_nc_ht=scontent.fceb2-1.fna&oh=e076cad7b2ad86db85e6e00b7e8cdc42&oe=619C2C24" alt="•_•">
+                    </a>
+                    <p class="newsTitle">OWNER MINECRAFTJOHN WILL BE BACK SOON!</p>
+                    <span class="newsTagStaff">STAFF</span><span class="newsDate">October 1, 2021</span>
+                </div>
+            </div>
+            <a id="newsSeemore" href="https://www.facebook.com/pinoylifecraft/">SEE MORE NEWS</a>
+        </div>
+        <div id="endofGameInfoSection">
+            <p id="endofGameInfoTitle">Do you need some help?</p>
+            <p id="endofGameInfoDesc">Find answers for all of your Pinoy LifeCraft questions at support page or have a look at this forum page to see the community issue and problem.</p>
+            <a href="support"><button id="endofGameInfoHelp" onclick="splashScreenout()">Support Page</button></a>
+            <a href="forums" id="endofGameInfoForums">See Forums</a>
         </div>
         <div id="footerSection">
             <div id="footerContainer">

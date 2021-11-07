@@ -265,104 +265,274 @@ body {
                  10px 20px 5px rgba(0,0,0,0.05),
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
-#voteSitesSection {
+#aboutSection {
     width: 100%;
-    padding: 128px 0px 70px;
+    margin: 64px 0px 100px;
 }
-#voteSitesMessageContainer {
+#aboutContainer {
     width: 1064px;
     max-width: 95%;
+    height: 300px;
     margin: auto;
-    padding: 0px 15px;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
-#voteSitesMessageTitle {
+#aboutTextContainer {
+    width: 475px;
+}
+#aboutTitle {
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 26px;
     color: var(--primarycolor);
-    text-align: center;
 }
-#voteSitesMessageDesc {
+#aboutDesc {
     font-size: 14px;
     line-height: 1.6;
-    padding-bottom: 64px;
     color: var(--secondarycolor);
-    text-align: center;
 }
-#voteSitesContainer {
+#aboutTrailer {
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgba(0,0,0,.33);
+    height: 290px;
+    width: 480px;
+    position: relative;
+    overflow: hidden;
+}
+#aboutTrailerThumbnail {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+#aboutTrailerWatchtext {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    color: var(--lightcolor);
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    background-color: #020711d0;
+    padding: 16px 0px;
+}
+#aboutTrailerButton {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    width: 68px;
+    height: 48px;
+    background-color: #020711c0;
+    border-radius: 4px;
+}
+#aboutTrailerButton:hover {
+    background-color: #020711;
+    cursor: pointer;
+}
+#aboutTrailerPlayButton {
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    z-index: 1;
+}
+.viewerBG {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 10;
+    display: none;
+}
+.viewerBGClose {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    cursor: pointer;
+}
+#aboutTrailerVideo {
+    height: 480px;
+    max-width: 835px;
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#gameinfoNavContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 1064px;
     max-width: 95%;
     margin: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d8dee4;
 }
-.voteSitesLink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 22px 18px;
-    height: 64px;
-    width: 224px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 24px;
-    color: var(--backuptextlight);
-    text-decoration: none;
+.gameinfoNavButtons {
+    background-color: var(--lightcolor);
+    font-size: 13px;
+    border: none;
+    border-radius: 0px;
+    padding: 8px 16px;
+}
+.gameinfoNavButtonsActive {
+    border-bottom: 2px solid var(--backuptextlight) !important;
+    font-weight: 600;
+}
+.gameinfoNavButtons:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #d8dee4;
+}
+#gameinfoNavButtonsRules {
+    background-color: var(--backuptextlight);
+    color: var(--lightcolor);
+    font-size: 13px;
+    border: none;
     border-radius: 4px;
-    background: var(--lightcolor);
+    padding: 8px 32px;
+}
+#gameinfoNavButtonsRules:hover {
+    cursor: pointer;
+    background-color: var(--backuptext);
+}
+#gameinfoIframeContainer {
+    width: 1064px;
+    max-width: 95%;
+    height: 500px;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: 100px;
+    border: 1px solid #d8dee4;
+}
+#gameinfoIframeContainer iframe {
+    width: 100%;
+    height: 100%;
+}
+#newsSection {
+    background-color: var(--lightcolor);
+    width: 100%;
+    padding-bottom: 84px;
+}
+#newsHeader {
+    color: var(--primarycolor);
+    padding: 4px 2.5% 64px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+#newsContainer {
+    display: flex;
+    width: 1064px;
+    max-width: 95%;
+    height: auto;
+    margin: auto;
+    overflow-y: hidden;
+    padding: 8px;
+}
+.newsImage {
+    width: 332px;
+    border-radius: 4px;
     box-shadow: 0px 6px 6px rgba(0,0,0,.33);
     transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
 }
-.voteSitesLink:hover {
+.newsImage:hover {
     transform: scale(1.02);
-    color: var(--lightcolor);
-    background: var(--backuptextlight);
+    cursor: pointer;
 }
-#voteSupportSection {
+#newsImage2 {
+    margin: 0px 24px 8px;
+}
+.newsTitle {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 0px;
+    width: 332px;
+}
+.newsTagServer {
+    font-weight: 500;
+    background-color: var(--backuptextlight);
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsTagAnnouncement {
+    font-weight: 500;
+    background-color: #b90f2e;
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsTagStaff {
+    font-weight: 500;
+    background-color: var(--secondarycolor);
+    color: var(--lightcolor);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+.newsDate {
+    margin-left: 16px;
+    color: var(--secondarycolor);
+}
+#newsSeemore {
+    display: table;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--backuptext);
+    text-decoration: none;
+    text-align: center;
+    margin: 42px auto auto auto;
+}
+#endofGameInfoSection {
     width: 760px;
     max-width: 95%;
     margin: 64px auto;
-    padding: 42px 15px;
+    padding: 64px 15px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#voteSupportTitle {
+#endofGameInfoTitle {
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 26px;
     color: var(--primarycolor);
     text-align: center;
 }
-#voteSupportDesc {
+#endofGameInfoDesc {
     font-size: 14px;
     line-height: 1.6;
     color: var(--secondarycolor);
     text-align: center;
     padding-bottom: 64px;
 }
-#voteSupportButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+#endofGameInfoHelp {
     background-color: var(--backuptextlight);
     font-size: 14px;
     font-weight: 600;
     height: 50px;
     width: 250px;
     color: var(--lightcolor);
+    border: none;
     border-radius: 4px;
 }
-#voteSupportButton:hover {
+#endofGameInfoHelp:hover {
     background-color: var(--backuptext);
     cursor: pointer;
 }
-#voteSupportDonate {
+#endofGameInfoForums {
     font-size: 14px;
     color: var(--backuptext);
     margin-top: 16px;
@@ -437,6 +607,20 @@ body {
         font-weight: 600;
         line-height: 1.6;
     }
+    #aboutContainer {
+        height: auto;
+        flex-direction: column;
+    }
+    #aboutTextContainer {
+        width: 95%;
+    }
+    #aboutTitle {
+        padding-top: 48px;
+        text-align: center;
+    }
+    #aboutDesc {
+        text-align: center;
+    }
 }
 @media screen and (max-width: 744px) {
     #footerNavigations {
@@ -450,18 +634,17 @@ body {
     .footerNavBlock a {
         font-size: 14px;
     }
-    #voteSitesContainer {
-        flex-direction: column;
-        align-content: center;
-    }
-    .voteSitesLink {
-        width: 97%;
-        margin: 8px 0px;
+    #aboutTrailer {
+        max-width: 98%;
     }
 }
 @media screen and (max-width: 360px) {
     #gameinfoHeaderText {
         font-size: 24px;
         font-weight: 500;
+    }
+    #aboutTrailerVideo {
+        width: 360px;
+        height: 202px;
     }
 }
