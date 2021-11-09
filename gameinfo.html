@@ -94,17 +94,22 @@
         </div>
         <div id="gameinfoNavContainer">
             <div id="gameinfoNav1">
-                <button class="gameinfoNavButtons gameinfoNavButtonsActive">Features</button>
-                <button class="gameinfoNavButtons">Maps</button>
-                <button class="gameinfoNavButtons">FAQs</button>
-                <button class="gameinfoNavButtons">Staff</button>
+                <button class="gameinfoNavButtons gameinfoNavButtonsActive"
+                    onclick="gameinfoButtonsFeatures()">Features</button>
+                <button class="gameinfoNavButtons" onclick="gameinfoButtonsMaps()">
+                    Maps</button>
+                <button class="gameinfoNavButtons" onclick="gameinfoButtonsFaqs()">
+                    FAQs</button>
+                <button class="gameinfoNavButtons" onclick="gameinfoButtonsStaff()">
+                    Staff</button>
             </div>
             <div id="gameinfoNav2">
                 <button id="gameinfoNavButtonsRules">Rules</button>
             </div>
         </div>
         <div id="gameinfoIframeContainer">
-            <iframe src="features.html" frameborder="0"></iframe>
+            <iframe src="features.html" id="gameinfoIframe"
+                    frameborder="0" title="Game Info Container"></iframe>
         </div>
         <div id="newsSection">
             <p id="newsHeader">RELATED NEWS</p>
@@ -177,6 +182,6 @@
                 </div>
             </div>
         </div>
-    <script src="index.js"></script>
+    <script src="gameinfo.js"></script>
     </body>
 </html>
