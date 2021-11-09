@@ -591,6 +591,9 @@ body {
     #playnowWarningContainer {
         padding: 16px 16px 16px 24px;
     }
+    #playnowSolutionContainer {
+        padding: 32px 22px;
+    }
 }
 @media screen and (max-width: 360px) {
     #playnowHeader {
