@@ -7,7 +7,7 @@
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width", initial-scale=1.0>
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="gameinfoliststyle.css">
+        <link rel="stylesheet" href="gameinfobranches.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,6 +15,9 @@
         <meta name="theme-color" content="#020711"/>
     </head>
     <body>
+        <div id="loadingScreenContainer">
+            <div id="loadingScreenLoader"></div>
+        </div>
         <p class="gameinfoFeaturesHeader">PRE-JOIN AND INTERFACE ON MULTIPLAYER</p>
         <div>
             <p class="gameinfoFeaturesListContainerTitle">
@@ -169,14 +172,13 @@
         <div id="gameinfoSuggestFeatureContainer">
             <p id="gameinfoSuggestFeatureTitle">Feel free to suggest us or help us by supporting.</p>
             <div id="gameinfoSuggestFeatureButtons">
-                <a id="gameinfoSuggestFeatureButtonSuggest"
-                   href=""
+                <a href=""
                    target="_blank" rel="noopener noreferrer">Suggest</a>
                 <span></span>
-                <a id="gameinfoSuggestFeatureButtonSupport"
-                   href=""
+                <a href=""
                    target="_blank" rel="noopener noreferrer">Support</a>
             </div>
         </div>
+        <script src="gameinfo.js"></script>
     </body>
 </html>

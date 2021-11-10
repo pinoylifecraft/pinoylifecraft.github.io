@@ -390,6 +390,9 @@ body {
     border-bottom: 2px solid var(--backuptextlight) !important;
     font-weight: 600;
 }
+.gameinfoNavButtonsInactive {
+    border-bottom: 2px solid #f6f6f6;
+}
 .gameinfoNavButtons:hover {
     cursor: pointer;
     border-bottom: 2px solid #d8dee4;

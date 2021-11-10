@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+:root {
+    --lightcolor: #f6f6f6;
+    --primarycolor: #2e3034;
+    --secondarycolor: #696969;
+    --backuptext: #1a5f96;
+    --backuptextlight: #1d73b9;
+    --backgroundcolor: #020711;
+}
+body {
+    background-color: var(--lightcolor);
+    color: var(--primarycolor);
+    padding: 42px 30px;
+}
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--backuptextlight);
+    border-radius: 4px;
+}
+#loadingScreenContainer {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: var(--lightcolor);
+    z-index: 9;
+}
+@keyframes loadingScreen {
+    0% {opacity: 1;}
+    100% {opacity: 0; visibility: hidden;}
+}
+#loadingScreenLoader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: var(--lightcolor);
+    border: 3px solid var(--backuptextlight);
+    border-top: 3px solid var(--lightcolor);
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation: loadingScreenLoader .4s linear infinite;
+}
+@keyframes loadingScreenLoader {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.gameinfoFeaturesHeader {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--backuptextlight);
+    margin-bottom: 26px;
+}
+.gameinfoFeaturesHeaderMargintop {
+    margin-top: 64px;
+}
+.gameinfoFeaturesListContainerTitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 0px 12px 32px;
+    position: relative;
+}
+.gameinfoFeaturesListContainerTitle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -29px;
+    width: 6px;
+    height: 6px;
+    border: solid 3px var(--backuptextlight);
+    border-radius: 4px;
+}
+.gameinfoFeaturesListContainerDesc {
+    line-height: 1.6;
+    color: var(--secondarycolor);
+    margin: 0px 0px 24px 32px;
+}
+#gameinfoSuggestFeatureContainer {
+    margin-top: 64px;
+    border-top: 1px solid #d8dee4;
+}
+#gameinfoSuggestFeatureTitle {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 32px 0px 22px;
+}
+#gameinfoSuggestFeatureButtons {
+    display: flex;
+    justify-content: center;
+}
+#gameinfoSuggestFeatureButtons a {
+    background-color: var(--lightcolor);
+    color: var(--backuptextlight);
+    text-decoration: none;
+    padding: 10px 26px;
+    border: solid 1px var(--backuptextlight);
+    border-radius: 4px;
+}
+#gameinfoSuggestFeatureButtons a:hover {
+    background-color: var(--backuptextlight);
+    border: solid 1px var(--backuptextlight);
+    color: var(--lightcolor);
+}
+#gameinfoSuggestFeatureButtons span {
+    width: 12px;
+}
+#gameinfoStaffContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gameinfoStaffBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 148px;
+    height: 180px;
+    padding: 20px;
+    border: solid 1px #d8dee4;
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
+    margin: 16px;
+}
+.gameinfoStaffBlockOwner {
+    border: solid 1px #adc9e4 !important;
+}
+.gameinfoStaffBlock img {
+    width: 58px;
+    height: 78px;
+    margin-bottom: 20px;
+}
+.gameinfoStaffBlock p {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.gameinfoStaffBlock span {
+    color: var(--secondarycolor);
+    text-align: center;
+}

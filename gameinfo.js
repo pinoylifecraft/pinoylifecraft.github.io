@@ -9,6 +9,7 @@ var gameinfoNavButtonsMaps = document.getElementsByClassName("gameinfoNavButtons
 var gameinfoNavButtonsFaqs = document.getElementsByClassName("gameinfoNavButtons")[2]
 var gameinfoNavButtonsStaff = document.getElementsByClassName("gameinfoNavButtons")[3]
 var gameinfoIframe = document.getElementById("gameinfoIframe")
+var loadingScreenContainer = document.getElementById("loadingScreenContainer")
 
 // PRE LOADER or SPLASH SCREEN
 window.addEventListener("load", function () {
@@ -66,3 +67,15 @@ function gameinfoButtonsStaff () {
     gameinfoNavButtonsStaff.setAttribute("class", "gameinfoNavButtons gameinfoNavButtonsActive")
     gameinfoIframe.src = "staff.html"
 }
+function gameinfoButtonsRules () {
+    gameinfoNavButtonsFeatures.setAttribute("class", "gameinfoNavButtons gameinfoNavButtonsInactive")
+    gameinfoNavButtonsMaps.setAttribute("class", "gameinfoNavButtons")
+    gameinfoNavButtonsFaqs.setAttribute("class", "gameinfoNavButtons")
+    gameinfoNavButtonsStaff.setAttribute("class", "gameinfoNavButtons")
+    gameinfoIframe.src = "rules.html"
+}
+
+// GAMEINFO IFRAME LOADER
+window.addEventListener("load", function () {
+    loadingScreenContainer.style.animation = "loadingScreen .4s forwards cubic-bezier(0.4, 0, 1, 1)"
+})
