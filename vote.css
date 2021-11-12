@@ -454,6 +454,9 @@ body {
         text-align: center;
         margin-top: 64px;
     }
+    #footerMediasContainer a{
+        text-decoration: none;
+    }
     .footerNavHeader {
         text-align: center;
     }

@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
     border-top: 3px solid var(--lightcolor);
     border-radius: 50%;
     transform: rotate(0deg);
-    animation: loadingScreenLoader .4s linear infinite;
+    animation: loadingScreenLoader .6s linear infinite;
 }
 @keyframes loadingScreenLoader {
     0% {transform: rotate(0deg);}

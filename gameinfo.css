@@ -235,7 +235,11 @@ body {
 #footerMedias {
     text-align: right;
 }
+#footerMediasContainer a{
+    text-decoration: none;
+}
 .footerMediasLink {
+    fill: none;
     margin: 0px 0px 8px 6px;
 }
 #footerCopyright {
@@ -540,6 +544,9 @@ body {
     color: var(--backuptext);
     margin-top: 16px;
 }
+#gameinfoNav2 {
+    display: none;
+}
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
         top: 40%;
@@ -639,6 +646,14 @@ body {
     }
     #aboutTrailer {
         max-width: 98%;
+    }
+}
+@media screen and (max-width: 360px) {
+    #gameinfoNav1 {
+        display: none;
+    }
+    #gameinfoNav2 {
+        display: block;
     }
 }
 @media screen and (max-width: 360px) {

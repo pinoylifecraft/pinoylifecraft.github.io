@@ -235,6 +235,9 @@ body {
 #footerMedias {
     text-align: right;
 }
+#footerMediasContainer a{
+    text-decoration: none;
+}
 .footerMediasLink {
     margin: 0px 0px 8px 6px;
 }
