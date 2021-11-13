@@ -649,14 +649,6 @@ body {
     }
 }
 @media screen and (max-width: 360px) {
-    #gameinfoNav1 {
-        display: none;
-    }
-    #gameinfoNav2 {
-        display: block;
-    }
-}
-@media screen and (max-width: 360px) {
     #gameinfoHeaderText {
         font-size: 24px;
         font-weight: 500;
@@ -664,5 +656,26 @@ body {
     #aboutTrailerVideo {
         width: 360px;
         height: 202px;
+    }
+    #gameinfoNav1 {
+        display: none;
+    }
+    #gameinfoNav2 {
+        display: block;
+    }
+    #gameinfoNavButtonsIcon10 {
+        display: none;
+    }
+    #gameinfoNavButtonsIcon21 {
+        display: none;
+    }
+    #gameinfoNavButtonsIcon31 {
+        display: none;
+    }
+    #gameinfoNavButtonsIcon41 {
+        display: none;
+    }
+    #gameinfoIframeContainer {
+        height: 400px;
     }
 }

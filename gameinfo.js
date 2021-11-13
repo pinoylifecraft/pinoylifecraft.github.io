@@ -14,10 +14,14 @@ var gameinfoNavButtonsMaps2 = document.getElementsByClassName("gameinfoNavButton
 var gameinfoNavButtonsFaqs2 = document.getElementsByClassName("gameinfoNavButtons")[6]
 var gameinfoNavButtonsStaff2 = document.getElementsByClassName("gameinfoNavButtons")[7]
 var gameinfoIframe = document.getElementById("gameinfoIframe")
-var gameinfoNavButtonsIcon1 = document.querySelectorAll(".gameinfoNavButtonsIcon1")
-var gameinfoNavButtonsIcon2 = document.querySelectorAll(".gameinfoNavButtonsIcon2")
-var gameinfoNavButtonsIcon3 = document.querySelectorAll(".gameinfoNavButtonsIcon3")
-var gameinfoNavButtonsIcon4 = document.querySelectorAll(".gameinfoNavButtonsIcon4")
+var gameinfoNavButtonsIcon10 = document.getElementById("gameinfoNavButtonsIcon10")
+var gameinfoNavButtonsIcon11 = document.getElementById("gameinfoNavButtonsIcon11")
+var gameinfoNavButtonsIcon20 = document.getElementById("gameinfoNavButtonsIcon20")
+var gameinfoNavButtonsIcon21 = document.getElementById("gameinfoNavButtonsIcon21")
+var gameinfoNavButtonsIcon30 = document.getElementById("gameinfoNavButtonsIcon30")
+var gameinfoNavButtonsIcon31 = document.getElementById("gameinfoNavButtonsIcon31")
+var gameinfoNavButtonsIcon40 = document.getElementById("gameinfoNavButtonsIcon40")
+var gameinfoNavButtonsIcon41 = document.getElementById("gameinfoNavButtonsIcon41")
 
 // PRE LOADER or SPLASH SCREEN
 window.addEventListener("load", function () {
@@ -66,12 +70,14 @@ function gameinfoButtonsFeatures () {
     gameinfoNavButtonsMaps2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsFaqs2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsStaff2.setAttribute("class", "gameinfoNavButtons")
-    for (let a = 0; a < gameinfoNavButtonsIcon1.length; a++) {
-        gameinfoNavButtonsIcon1.setAttribute("fill", "#1d73b9")
-        gameinfoNavButtonsIcon2.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon3.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon4.setAttribute("fill", "#696969")
-    }
+    gameinfoNavButtonsIcon10.style.display = "none"
+    gameinfoNavButtonsIcon11.style.display = "block"
+    gameinfoNavButtonsIcon20.style.display = "block"
+    gameinfoNavButtonsIcon21.style.display = "none"
+    gameinfoNavButtonsIcon30.style.display = "block"
+    gameinfoNavButtonsIcon31.style.display = "none"
+    gameinfoNavButtonsIcon40.style.display = "block"
+    gameinfoNavButtonsIcon41.style.display = "none"
     gameinfoIframe.src = "features.html"
 }
 function gameinfoButtonsMaps () {
@@ -83,12 +89,14 @@ function gameinfoButtonsMaps () {
     gameinfoNavButtonsMaps2.setAttribute("class", "gameinfoNavButtons gameinfoNavButtonsActive")
     gameinfoNavButtonsFaqs2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsStaff2.setAttribute("class", "gameinfoNavButtons")
-    for (let b = 0; b < gameinfoNavButtonsIcon2.length; b++) {
-        gameinfoNavButtonsIcon1.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon2.setAttribute("fill", "#1d73b9")
-        gameinfoNavButtonsIcon3.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon4.setAttribute("fill", "#696969")
-    }
+    gameinfoNavButtonsIcon10.style.display = "block"
+    gameinfoNavButtonsIcon11.style.display = "none"
+    gameinfoNavButtonsIcon20.style.display = "none"
+    gameinfoNavButtonsIcon21.style.display = "block"
+    gameinfoNavButtonsIcon30.style.display = "block"
+    gameinfoNavButtonsIcon31.style.display = "none"
+    gameinfoNavButtonsIcon40.style.display = "block"
+    gameinfoNavButtonsIcon41.style.display = "none"
     gameinfoIframe.src = "maps.html"
 }
 function gameinfoButtonsFaqs () {
@@ -100,13 +108,15 @@ function gameinfoButtonsFaqs () {
     gameinfoNavButtonsMaps2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsFaqs2.setAttribute("class", "gameinfoNavButtons gameinfoNavButtonsActive")
     gameinfoNavButtonsStaff2.setAttribute("class", "gameinfoNavButtons")
-    for (let c = 0; c < gameinfoNavButtonsIcon3.length; c++) {
-        gameinfoNavButtonsIcon1.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon2.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon3.setAttribute("fill", "#1d73b9")
-        gameinfoNavButtonsIcon4.setAttribute("fill", "#696969")
-    }
-    gameinfoIframe.setAttribute("src", "faq.html")
+    gameinfoNavButtonsIcon10.style.display = "block"
+    gameinfoNavButtonsIcon11.style.display = "none"
+    gameinfoNavButtonsIcon20.style.display = "block"
+    gameinfoNavButtonsIcon21.style.display = "none"
+    gameinfoNavButtonsIcon30.style.display = "none"
+    gameinfoNavButtonsIcon31.style.display = "block"
+    gameinfoNavButtonsIcon40.style.display = "block"
+    gameinfoNavButtonsIcon41.style.display = "none"
+    gameinfoIframe.src = "faq.html"
 }
 function gameinfoButtonsStaff () {
     gameinfoNavButtonsFeatures.setAttribute("class", "gameinfoNavButtons")
@@ -117,12 +127,14 @@ function gameinfoButtonsStaff () {
     gameinfoNavButtonsMaps2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsFaqs2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsStaff2.setAttribute("class", "gameinfoNavButtons gameinfoNavButtonsActive")
-    for (let d = 0; d < gameinfoNavButtonsIcon4.length; d++) {
-        gameinfoNavButtonsIcon1.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon2.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon3.setAttribute("fill", "#696969")
-        gameinfoNavButtonsIcon4.setAttribute("fill", "#1d73b9")
-    }
+    gameinfoNavButtonsIcon10.style.display = "block"
+    gameinfoNavButtonsIcon11.style.display = "none"
+    gameinfoNavButtonsIcon20.style.display = "block"
+    gameinfoNavButtonsIcon21.style.display = "none"
+    gameinfoNavButtonsIcon30.style.display = "block"
+    gameinfoNavButtonsIcon31.style.display = "none"
+    gameinfoNavButtonsIcon40.style.display = "none"
+    gameinfoNavButtonsIcon41.style.display = "block"
     gameinfoIframe.src = "staff.html"
 }
 function gameinfoButtonsRules () {
@@ -134,9 +146,13 @@ function gameinfoButtonsRules () {
     gameinfoNavButtonsMaps2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsFaqs2.setAttribute("class", "gameinfoNavButtons")
     gameinfoNavButtonsStaff2.setAttribute("class", "gameinfoNavButtons")
-    gameinfoNavButtonsIcon1.setAttribute("fill", "#696969")
-    gameinfoNavButtonsIcon2.setAttribute("fill", "#696969")
-    gameinfoNavButtonsIcon3.setAttribute("fill", "#696969")
-    gameinfoNavButtonsIcon4.setAttribute("fill", "#696969")
+    gameinfoNavButtonsIcon10.style.display = "block"
+    gameinfoNavButtonsIcon11.style.display = "none"
+    gameinfoNavButtonsIcon20.style.display = "block"
+    gameinfoNavButtonsIcon21.style.display = "none"
+    gameinfoNavButtonsIcon30.style.display = "block"
+    gameinfoNavButtonsIcon31.style.display = "none"
+    gameinfoNavButtonsIcon40.style.display = "block"
+    gameinfoNavButtonsIcon41.style.display = "none"
     gameinfoIframe.src = "rules.html"
 }

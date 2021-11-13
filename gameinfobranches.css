@@ -46,11 +46,11 @@ body::-webkit-scrollbar-thumb {
     width: 32px;
     height: 32px;
     background-color: var(--lightcolor);
-    border: 3px solid var(--backuptextlight);
-    border-top: 3px solid var(--lightcolor);
+    border: 3px solid #d8dee4;
+    border-top: 3px solid var(--backuptextlight);
     border-radius: 50%;
     transform: rotate(0deg);
-    animation: loadingScreenLoader .6s linear infinite;
+    animation: loadingScreenLoader .4s linear infinite;
 }
 @keyframes loadingScreenLoader {
     0% {transform: rotate(0deg);}
@@ -149,4 +149,14 @@ body::-webkit-scrollbar-thumb {
 .gameinfoStaffBlock span {
     color: var(--secondarycolor);
     text-align: center;
+}
+@media screen and (max-width: 444px) {
+    body {
+        padding: 5% 3%;
+    }
+}
+@media screen and (max-width: 360px) {
+    #gameinfoStaffContainer {
+        justify-content: center;
+    }
 }
