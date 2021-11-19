@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinoy LifeCraft - An MMORPG Filipino Minecraft server</title>
+    <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <link rel="shortcut icon" href="resources/server-logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://i.imgur.com/P4dOmQD.png"/>
+    <meta name="theme-color" content="#020711"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R50XKKZYG2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R50XKKZYG2');
+    </script>
+</head>
+<body>
+    <div id="splashScreen">
+        <div id="splashScreenGrid">
+            <img src="resources/splash-screen/loading-animation.gif" alt="Downloading resources, please wait." id="splashScreenLoadingAnimation">
+            <p id="splashScreenLoadingText">Loading resources</p>
+        </div>
+    </div>
+    <nav id="navSection">
+        <div id="navListContainer">
+            <div class="navList">
+                <a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index">
+                    <img src="resources/server-logo/website-logo.png"
+                    alt="Pinoy LifeCraft Home Page Logo" id="navListLogo">
+                </a>
+                <a class="navListLink" onclick="splashScreenout()" href="rules">RULES</a>
+                <a class="navListLink" onclick="splashScreenout()" href="support">SUPPORT</a>
+                <a class="navListLink" onclick="splashScreenout()" href="staff">TEAM</a>
+                <a class="navListLink" onclick="splashScreenout()" href="store">STORE</a>
+            </div>
+            <div class="navList">
+                <a class="navListLink" onclick="splashScreenout()" href="vote">VOTE</a>
+                <a id="navListButton" onclick="splashScreenout()" href="play">PLAY NOW</a>
+            </div>
+        </div>
+        <a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index">
+            <img src="resources/server-logo/website-logo.png"
+            alt="Pinoy LifeCraft Home Page Logo" id="mobilenavLogo">
+        </a>
+        <svg width="32" height="32" id="mobilenavMenu" onclick="mobilenavMenuFadeout()" viewBox="0 0 32 32">
+            <circle opacity="0" cx="16" cy="16" r="16"></circle>
+            <path fill="#f6f6f6" d="M22 10v2H10v-2zm0 5v2H10v-2zm0 5v2H10v-2z"></path>
+        </svg>
+        <svg width="32" height="32" id="mobilenavMenuClose" onclick="mobilenavMenuFadein()" viewBox="0 0 32 32">
+            <circle opacity="0" cx="16" cy="16" r="16"></circle>
+            <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="#f6f6f6" stroke-width="2"></path>
+        </svg>
+    </nav>
+    <nav id="mobilenavListContainer">
+        <a class="navListLink" onclick="splashScreenout()" href="rules">RULES</a>
+        <a class="navListLink" onclick="splashScreenout()" href="support">SUPPORT</a>
+        <a class="navListLink" onclick="splashScreenout()" href="staff">TEAM</a>
+        <a class="navListLink" onclick="splashScreenout()" href="store">STORE</a>
+        <a class="navListLink" onclick="splashScreenout()" href="vote">VOTE</a>
+        <a id="navListButton" onclick="splashScreenout()" href="play">PLAY NOW</a>
+    </nav>
+    <div id="mobilenavMenuBackground" onclick="mobilenavMenuFadein()"></div>
+    <div id="homeContainer">
+        <div id="homeBackgroundContainer">
+            <img src="resources/homecover/hero_background-default.png" id="homeBackgroundImage" alt="Late night Minecraft terrain, image from minecraft.net">
+            <div id="homeContent">
+                <p id="homeContentTitle">An MMO role playing game Filipino Minecraft server.</p>
+                <div id="homeContentButton">
+                    <p id="homeContentSubtitle">High quality customized vanilla server for Minecraft v1.17.1</p>
+                    <a href="play"><button id="homeContentPlaynow" onclick="splashScreenout()">PLAY FREE</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutSection">
+        <div id="aboutContainer">
+            <div id="aboutTrailer">
+                <img id="aboutTrailerThumbnail" src="https://i.imgur.com/9ww4Meb.png" alt="Trailer">
+                <p id="aboutTrailerWatchtext">WATCH THE TRAILER</p>
+                <div id="aboutTrailerButton" onclick="trailerVideoOpen()" title="Play video">
+                    <svg id="aboutTrailerPlayButton" viewBox="0, 0, 400,480">
+                        <g>
+                            <path d="M0.000 20.000 L 0.000 40.000 39.145 40.000 L 78.291 40.000 79.345 41.055 L 80.400 42.109 80.400 60.426 C 80.400 76.544,80.475 78.818,81.029 79.371 C 81.591 79.934,85.674 80.000,119.974 80.000 L 158.291 80.000 159.345 81.055 L 160.400 82.109 160.400 100.426 C 160.400 116.544,160.475 118.818,161.029 119.371 C 161.591 119.934,165.674 120.000,199.974 120.000 L 238.291 120.000 239.345 121.055 L 240.400 122.109 240.400 140.426 C 240.400 156.544,240.475 158.818,241.029 159.371 C 241.591 159.934,245.674 160.000,279.974 160.000 L 318.291 160.000 319.345 161.055 L 320.400 162.109 320.400 180.426 C 320.400 196.544,320.475 198.818,321.029 199.371 C 321.591 199.934,325.752 200.000,360.829 200.000 L 400.000 200.000 400.000 100.000 L 400.000 0.000 200.000 0.000 L 0.000 0.000 0.000 20.000 M320.880 320.880 C 320.521 321.239,320.400 325.992,320.400 339.805 L 320.400 358.250 319.278 359.325 L 318.156 360.400 279.758 360.400 C 250.426 360.400,241.247 360.513,240.880 360.880 C 240.521 361.239,240.400 365.992,240.400 379.805 L 240.400 398.250 239.278 399.325 L 238.156 400.400 199.758 400.400 C 170.426 400.400,161.247 400.513,160.880 400.880 C 160.521 401.239,160.400 405.982,160.400 419.758 L 160.400 438.156 159.325 439.278 L 158.250 440.400 119.805 440.400 C 90.437 440.400,81.247 440.513,80.880 440.880 C 80.520 441.240,80.400 446.187,80.400 460.680 L 80.400 480.000 240.200 480.000 L 400.000 480.000 400.000 400.200 L 400.000 320.400 360.680 320.400 C 330.631 320.400,321.247 320.513,320.880 320.880 "
+                            fill="none" fill-rule="evenodd"></path>
+                            <path d="M320.880 280.880 C 320.521 281.239,320.400 285.992,320.400 299.805 L 320.400 318.250 319.278 319.325 L 318.156 320.400 279.758 320.400 C 250.426 320.400,241.247 320.513,240.880 320.880 C 240.521 321.239,240.400 325.992,240.400 339.805 L 240.400 358.250 239.278 359.325 L 238.156 360.400 199.758 360.400 C 170.426 360.400,161.247 360.513,160.880 360.880 C 160.521 361.239,160.400 365.982,160.400 379.758 L 160.400 398.156 159.325 399.278 L 158.250 400.400 119.805 400.400 C 90.437 400.400,81.247 400.513,80.880 400.880 C 80.521 401.239,80.400 405.992,80.400 419.805 L 80.400 438.250 79.278 439.325 L 78.156 440.400 39.078 440.400 L 0.000 440.400 0.000 460.200 L 0.000 480.000 40.200 480.000 L 80.400 480.000 80.400 460.680 C 80.400 446.187,80.520 441.240,80.880 440.880 C 81.247 440.513,90.437 440.400,119.805 440.400 L 158.250 440.400 159.325 439.278 L 160.400 438.156 160.400 419.758 C 160.400 405.982,160.521 401.239,160.880 400.880 C 161.247 400.513,170.437 400.400,199.805 400.400 L 238.250 400.400 239.325 399.278 L 240.400 398.156 240.400 379.758 C 240.400 365.982,240.521 361.239,240.880 360.880 C 241.247 360.513,250.426 360.400,279.758 360.400 L 318.156 360.400 319.278 359.325 L 320.400 358.250 320.400 339.805 C 320.400 325.992,320.521 321.239,320.880 320.880 C 321.247 320.513,330.631 320.400,360.680 320.400 L 400.000 320.400 400.000 300.400 L 400.000 280.400 360.680 280.400 C 330.631 280.400,321.247 280.513,320.880 280.880 "
+                            fill="rgba(0, 0, 0, 0.25)" fill-rule="evenodd"></path>
+                            <path d="M0.000 240.200 L 0.000 440.400 39.078 440.400 L 78.156 440.400 79.278 439.325 L 80.400 438.250 80.400 419.805 C 80.400 405.992,80.521 401.239,80.880 400.880 C 81.247 400.513,90.426 400.400,119.758 400.400 L 158.156 400.400 159.278 399.325 L 160.400 398.250 160.400 379.805 C 160.400 365.992,160.521 361.239,160.880 360.880 C 161.247 360.513,170.426 360.400,199.758 360.400 L 238.156 360.400 239.278 359.325 L 240.400 358.250 240.400 339.805 C 240.400 325.992,240.521 321.239,240.880 320.880 C 241.247 320.513,250.437 320.400,279.805 320.400 L 318.250 320.400 319.325 319.278 L 320.400 318.156 320.400 299.758 C 320.400 285.982,320.521 281.239,320.880 280.880 C 321.247 280.513,330.631 280.400,360.680 280.400 L 400.000 280.400 400.000 240.200 L 400.000 200.000 360.829 200.000 C 325.752 200.000,321.591 199.934,321.029 199.371 C 320.475 198.818,320.400 196.544,320.400 180.426 L 320.400 162.109 319.345 161.055 L 318.291 160.000 279.974 160.000 C 245.674 160.000,241.591 159.934,241.029 159.371 C 240.475 158.818,240.400 156.544,240.400 140.426 L 240.400 122.109 239.345 121.055 L 238.291 120.000 199.974 120.000 C 165.674 120.000,161.591 119.934,161.029 119.371 C 160.475 118.818,160.400 116.544,160.400 100.426 L 160.400 82.109 159.345 81.055 L 158.291 80.000 119.974 80.000 C 85.674 80.000,81.591 79.934,81.029 79.371 C 80.475 78.818,80.400 76.544,80.400 60.426 L 80.400 42.109 79.345 41.055 L 78.291 40.000 39.145 40.000 L 0.000 40.000 0.000 240.200 "
+                            fill="#fff" fill-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>  
+            <div id="aboutTextContainer">
+                <p id="aboutTitle">What is Pinoy LifeCraft?</p>
+                <p id="aboutDesc">Pinoy LifeCraft is a massive multiplayer online role playing game enhance Minecraft: Java Edition server.
+                    Minecrafters team up with online friends to survive, build, explore, fight the enemies and have fun using their chosen role.
+                <br><br>Whether you are building up your base, exploring the server worlds or completing game or daily quests, we have something for everyone here on Pinoy LifeCraft!</p>
+            </div>
+        </div>
+        <div class="viewerBG" onclick="trailerVideoClose()">
+            <svg width="32" height="32" class="viewerBGClose" viewBox="0 0 32 32" title="Close">
+                <title>Close</title>
+                <circle opacity=".1" fill="var(--lightcolor)" cx="16" cy="16" r="16"></circle>
+                <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="var(--lightcolor)" stroke-width="2"></path>
+            </svg>
+            <iframe id="aboutTrailerVideo" src="https://www.youtube.com/embed/ac5s6a5ZbWM"
+            frameborder="0" allowfullscreen title="Pinoy LifeCraft Trailer" allow="autoplay"></iframe>
+        </div>
+    </div>
+    <div id="screenshotSection">
+        <p id="screenshotHeader">GAMEPLAY SCREENSHOTS</p>
+        <div id="screenshotContainer">
+            <img src="https://i.imgur.com/LZoZ89a.png"
+                onclick="screenshotOpen1()"
+                alt="Screenshot 1 - Creative Menu">
+            <img src="https://i.imgur.com/L5oOx62.png"
+                onclick="screenshotOpen2()"
+                alt="Screenshot 2 - Hiding in the Bush">
+            <img src="https://i.imgur.com/hR6S5Po.png"
+                onclick="screenshotOpen3()"
+                alt="Screenshot 3 - Creative Menu Button">
+            <img src="https://i.imgur.com/VwMmk60.png"
+                onclick="screenshotOpen4()"
+                alt="Screenshot 4 - Server Tab">
+            <img src="https://i.imgur.com/zulmRcE.png"
+                onclick="screenshotOpen5()"
+                alt="Screenshot 5 - Creative Furniture">
+            <img src="https://i.imgur.com/U3suTWR.png"
+                onclick="screenshotOpen6()"
+                alt="Screenshot 6 - Creative Pet">
+        </div>
+        <div id="screenshotContainerMobile">
+            <img class="screenshotsImageMobile" src="https://i.imgur.com/LZoZ89a.png"
+                onclick="screenshotOpen1()"
+                alt="Screenshot 1 - Creative Menu">
+            <img class="screenshotsImageMobile" src="https://i.imgur.com/L5oOx62.png"
+                onclick="screenshotOpen2()"
+                alt="Screenshot 2 - Hiding in the Bush">
+            <div id="screenshotsViewmoreContainer">
+                <img id="screenshotsViewmoreThumbnail" src="https://i.imgur.com/hR6S5Po.png"
+                onclick="screenshotOpen3()"
+                alt="Screenshot 3 - Creative Menu Button">
+                <p id="screenshotsViewmoreText" onclick="screenshotOpen3()">VIEW MORE</p>
+            </div>
+        </div>
+        <div class="viewerBG">
+            <svg width="32" height="32" class="viewerBGClose" onclick="screenshotClose()" viewBox="0 0 32 32" title="Close">
+                <title>Close</title>
+                <circle opacity=".1" fill="var(--lightcolor)" cx="16" cy="16" r="16"></circle>
+                <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="var(--lightcolor)" stroke-width="2"></path>
+            </svg>
+            <p id="screenshotImageText">
+                <span id="screenshotImageCounter">0</span> of 6
+            </p>
+            <div id="screenshotImageContainer">
+                <img id="screenshotImage"
+                    src="https://i.imgur.com/LZoZ89a.png"
+                    alt="Screenshot 1 - Creative Menu">
+            </div>
+            <svg id="screenshotImagePrev" x="0px" y="0px"
+                viewBox="0 0 55.752 55.752">
+                <title>Previous</title>
+                <g>
+                    <path fill="var(--lightcolor)" d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+                        c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+                        s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+                        C44.605,26.413,44.086,24.993,43.006,23.916z"/>
+                </g>
+            </svg>
+            <svg id="screenshotImageNext" onclick="" x="0px" y="0px"
+                viewBox="0 0 55.752 55.752">
+                <title>Next</title>
+                <g>
+                    <path fill="var(--lightcolor)" d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+                        c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+                        s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+                        C44.605,26.413,44.086,24.993,43.006,23.916z"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div id="newsSection">
+        <p id="newsHeader">LATEST NEWS</p>
+        <div id="newsContainer">
+            <div>
+                <a href="pinoylifecraft.github.io">
+                    <img class="newsImage" src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/92780594_1538276313017394_1547665098309369856_n.png?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=sb547ogyjGYAX-7STPn&_nc_ht=scontent.fceb2-1.fna&oh=8a49bc44e66aba9e44eec8e6d5d2cc55&oe=61BA80EE" alt="First news thumbnail">
+                </a>
+                <p class="newsTitle">JOIN OUR DISCORD: CLICK TO JOIN INSTANTLY.</p>
+                <span class="newsTagAnnouncement">ANNOUNCEMENT</span><span class="newsDate">October 1, 2021</span>
+            </div>
+            <div id="newsImage2">
+                <a href="https://www.facebook.com/pinoylifecraft/photos/a.344317312413306/862187837292915/">
+                    <img class="newsImage" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/21557994_862187837292915_9197230270789123651_n.png?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFjZcfoRxLGfR_UsSjw4NWAIvriSsofkxci-uJKyh-TF0kBYwDezvdToEm0L42JS9Mjh1HvJ-cblq352TUABcBs&_nc_ohc=wARn-fwlp0gAX9Nq0P4&_nc_ht=scontent.fceb2-2.fna&oh=2d7aa265740e385ff59af764aa520dcb&oe=619AC145" alt="Second news thumbnail">
+                </a>
+                <p class="newsTitle">FRESH, MINIMAL AND NEW SERVER HUB</p>
+                <span class="newsTagServer">SERVER</span><span class="newsDate">October 1, 2021</span>
+            </div>
+            <div>
+                <a href="pinoylifecraft.github.io">
+                    <img class="newsImage" src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.18169-9/20155851_831042933740739_2637259529348962852_n.png?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEglnZwAlvl1DgJCI_Eg3i-JqiaFCS6WNUmqJoUJLpY1e7vOTHRo7ASIhHHZwHE9t27x8Txp_UhGwR6RojKq259&_nc_ohc=1PU4gBZ2WzEAX8DnJTF&_nc_ht=scontent.fceb2-1.fna&oh=e076cad7b2ad86db85e6e00b7e8cdc42&oe=619C2C24" alt="Third news thumbnail">
+                </a>
+                <p class="newsTitle">OWNER MINECRAFTJOHN WILL BE BACK SOON!</p>
+                <span class="newsTagStaff">STAFF</span><span class="newsDate">October 1, 2021</span>
+            </div>
+        </div>
+        <a id="newsSeemore" href="https://www.facebook.com/pinoylifecraft/">SEE MORE NEWS</a>
+    </div>
+    <div id="featureShortSection">
+        <p id="featureShortHeader">SERVER FEATURES</p>
+        <div id="featureShortContainer">
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="26" width="6" height="2" fill="#020711"/>
+                    <rect x="30" y="2" width="2" height="4" fill="#020711"/>
+                    <rect x="4" y="24" width="2" height="8" fill="#020711"/>
+                    <rect y="26" width="8" height="2" fill="#020711"/>
+                    <rect y="28" width="2" height="4" fill="#020711"/>
+                    <rect x="2" y="30" width="2" height="2" fill="#020711"/>
+                    <rect x="18" y="24" width="2" height="4" fill="#020711"/>
+                    <rect x="16" y="26" width="2" height="2" fill="#020711"/>
+                    <rect x="4" y="12" width="2" height="4" fill="#020711"/>
+                    <rect x="6" y="12" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="14" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="4" width="2" height="2" fill="#020711"/>
+                    <rect x="24" y="2" width="2" height="2" fill="#020711"/>
+                    <rect x="28" y="6" width="2" height="2" fill="#020711"/>
+                    <rect x="16" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="18" y="16" width="2" height="2" fill="#020711"/>
+                    <rect x="20" y="14" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="12" width="2" height="2" fill="#020711"/>
+                    <rect x="24" y="10" width="2" height="2" fill="#020711"/>
+                    <rect x="26" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="20" y="6" width="2" height="2" fill="#020711"/>
+                    <rect x="18" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="16" y="10" width="2" height="2" fill="#020711"/>
+                    <rect x="14" y="12" width="2" height="2" fill="#020711"/>
+                    <rect x="10" y="16" width="2" height="4" fill="#020711"/>
+                    <rect x="16" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="20" width="4" height="2" fill="#020711"/>
+                    <rect x="10" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="24" width="4" height="2" fill="#020711"/>
+                    <rect x="8" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="20" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="14" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="16" width="2" height="4" fill="#020711"/>
+                </svg>
+                <p class="featureShortBlockTitle">MMORPG</p>
+                <p class="featureShortBlockDesc">Has 3 roles to choose (Warrior, Archer and Mage). Robust skills with unique skill abilities and follows an XP system of a real RPG/MMO.</p>
+            </div>
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="12" y="2" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="6" width="2" height="2" fill="#020711"/>
+                    <rect x="10" y="4" width="2" height="2" fill="#020711"/>
+                    <rect x="14" y="4" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="6" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="12" width="2" height="2" fill="#020711"/>
+                    <rect x="16" y="16" width="2" height="2" fill="#020711"/>
+                    <rect x="14" y="14" width="2" height="2" fill="#020711"/>
+                    <rect x="14" y="10" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="10" width="2" height="2" fill="#020711"/>
+                    <rect x="4" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="6" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="10" width="2" height="2" fill="#020711"/>
+                    <rect x="20" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="24" y="8" width="2" height="2" fill="#020711"/>
+                    <rect x="16" y="12" width="4" height="2" fill="#020711"/>
+                    <rect x="20" y="14" width="2" height="4" fill="#020711"/>
+                    <rect x="24" y="16" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="26" y="18" width="2" height="4" fill="#020711"/>
+                    <rect x="28" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="26" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="24" y="26" width="2" height="2" fill="#020711"/>
+                    <rect x="4" y="12" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="14" width="2" height="4" fill="#020711"/>
+                    <rect x="8" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="10" y="16" width="4" height="2" fill="#020711"/>
+                    <rect x="12" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="2" y="14" width="2" height="8" fill="#020711"/>
+                    <rect x="4" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="26" width="2" height="2" fill="#020711"/>
+                    <rect x="10" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="12" y="26" width="2" height="2" fill="#020711"/>
+                    <rect x="14" y="28" width="10" height="2" fill="#020711"/>
+                </svg>
+                <p class="featureShortBlockTitle">New Items</p>
+                <p class="featureShortBlockDesc">Custom items, weapons and blocks. Furnitures are completely based on a medieval period atmosphere to fit exactly on the server's theme.</p>
+            </div>
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="16" y="28" width="2" height="2" fill="#010711"/>
+                    <rect x="18" y="26" width="2" height="2" fill="#010711"/>
+                    <rect x="10" y="26" width="6" height="2" fill="#010711"/>
+                    <rect x="6" y="24" width="4" height="2" fill="#010711"/>
+                    <rect x="4" y="22" width="2" height="2" fill="#010711"/>
+                    <rect x="2" y="20" width="2" height="2" fill="#010711"/>
+                    <rect x="4" y="16" width="2" height="4" fill="#010711"/>
+                    <rect x="6" y="12" width="2" height="4" fill="#010711"/>
+                    <rect x="8" y="8" width="2" height="4" fill="#010711"/>
+                    <rect x="20" y="22" width="2" height="4" fill="#010711"/>
+                    <rect x="22" y="18" width="2" height="4" fill="#010711"/>
+                    <rect x="24" y="12" width="2" height="6" fill="#010711"/>
+                    <rect x="24" y="8" width="4" height="2" fill="#010711"/>
+                    <rect x="26" y="10" width="4" height="2" fill="#010711"/>
+                    <rect x="26" y="12" width="2" height="2" fill="#010711"/>
+                    <rect x="18" y="10" width="6" height="2" fill="#010711"/>
+                    <rect x="14" y="8" width="4" height="2" fill="#010711"/>
+                    <rect x="10" y="6" width="4" height="2" fill="#010711"/>
+                    <rect x="8" y="2" width="8" height="2" fill="#010711"/>
+                    <rect x="20" y="6" width="4" height="2" fill="#010711"/>
+                    <rect x="16" y="4" width="4" height="2" fill="#010711"/>
+                    <rect x="8" y="4" width="2" height="2" fill="#010711"/>
+                </svg>
+                <p class="featureShortBlockTitle">Server UI</p>
+                <p class="featureShortBlockDesc">Customized user interface and menus. No more chest menu thanks to the power of custom resourcepack.</p>
+            </div>
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="10" y="6" width="12" height="2" fill="#010711"/>
+                    <rect x="8" y="8" width="2" height="2" fill="#010711"/>
+                    <rect x="22" y="8" width="2" height="2" fill="#010711"/>
+                    <rect x="24" y="10" width="2" height="10" fill="#010711"/>
+                    <rect x="6" y="10" width="2" height="10" fill="#010711"/>
+                    <rect x="8" y="20" width="2" height="4" fill="#010711"/>
+                    <rect x="10" y="16" width="4" height="2" fill="#010711"/>
+                    <rect x="18" y="16" width="4" height="2" fill="#010711"/>
+                    <rect x="22" y="20" width="2" height="4" fill="#010711"/>
+                    <rect x="10" y="24" width="2" height="2" fill="#010711"/>
+                    <rect x="20" y="24" width="2" height="2" fill="#010711"/>
+                    <rect x="12" y="26" width="8" height="2" fill="#010711"/>
+                </svg>
+                <p class="featureShortBlockTitle">Chat Emoji</p>
+                <p class="featureShortBlockDesc">Supports sending emoji on game chat. No special code just type :) and it will automatically convert into emoji when message sent.</p>
+            </div>
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="28" y="4" width="2" height="14" fill="#010711"/>
+                    <rect x="4" y="18" width="26" height="4" fill="#010711"/>
+                    <rect x="18" y="22" width="2" height="10" fill="#010711"/>
+                    <rect x="14" y="22" width="2" height="10" fill="#010711"/>
+                    <rect x="16" y="30" width="2" height="2" fill="#010711"/>
+                    <rect x="12" y="12" width="4" height="4" fill="#010711"/>
+                    <rect x="12" y="8" width="4" height="2" fill="#010711"/>
+                    <rect x="18" y="14" width="4" height="2" fill="#010711"/>
+                    <rect x="24" y="8" width="2" height="2" fill="#010711"/>
+                    <rect x="24" y="12" width="2" height="4" fill="#010711"/>
+                    <rect x="6" y="6" width="2" height="4" fill="#010711"/>
+                    <rect x="8" y="8" width="2" height="2" fill="#010711"/>
+                    <rect x="18" y="6" width="2" height="4" fill="#010711"/>
+                    <rect x="20" y="8" width="2" height="2" fill="#010711"/>
+                    <rect x="8" y="12" width="2" height="4" fill="#010711"/>
+                    <rect x="6" y="14" width="2" height="2" fill="#010711"/>
+                </svg>
+                <p class="featureShortBlockTitle">Your Logo</p>
+                <p class="featureShortBlockDesc">Show your clan logo to everyone. If your clan is verified you will be able to put your clan logo in your in-game name.</p>
+            </div>
+            <div class="featureShortBlock">
+                <svg class="featureShortBlockImg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="12" width="8" height="2" fill="#020711"/>
+                    <rect x="20" y="10" width="2" height="6" fill="#020711"/>
+                    <rect x="24" y="6" width="2" height="12" fill="#020711"/>
+                    <rect x="6" y="6" width="2" height="12" fill="#020711"/>
+                    <rect x="12" y="22" width="8" height="2" fill="#020711"/>
+                    <rect x="14" y="18" width="4" height="2" fill="#020711"/>
+                    <rect x="26" y="20" width="6" height="2" fill="#020711"/>
+                    <rect x="30" y="22" width="2" height="6" fill="#020711"/>
+                    <rect y="20" width="2" height="8" fill="#020711"/>
+                    <rect x="2" y="20" width="4" height="2" fill="#020711"/>
+                    <rect x="8" y="26" width="16" height="2" fill="#020711"/>
+                    <rect x="6" y="30" width="20" height="2" fill="#020711"/>
+                    <rect x="4" y="26" width="2" height="4" fill="#020711"/>
+                    <rect x="26" y="26" width="2" height="4" fill="#020711"/>
+                    <rect x="10" y="2" width="2" height="2" fill="#020711"/>
+                    <rect x="20" y="2" width="2" height="2" fill="#020711"/>
+                    <rect x="20" y="20" width="2" height="2" fill="#020711"/>
+                    <rect x="10" y="20" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="4" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="6" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="2" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="26" y="22" width="2" height="2" fill="#020711"/>
+                    <rect x="28" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="24" y="24" width="2" height="2" fill="#020711"/>
+                    <rect x="18" y="16" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="18" width="2" height="2" fill="#020711"/>
+                    <rect x="22" y="4" width="2" height="2" fill="#020711"/>
+                    <rect x="8" y="4" width="2" height="2" fill="#020711"/>
+                </svg>
+                <p class="featureShortBlockTitle">Many Rewards</p>
+                <p class="featureShortBlockDesc">Get rewards through daily, weekend, quest, crates and killing monsters. Feel free suggest us some events or make your own!</p>
+            </div>
+        </div>
+    </div>
+    <div class="featureSection">
+        <div class="featureContainer">
+            <div class="featureTextContainer">
+                <p class="featureTitle">No Resourcepack Conflicts</p>
+                <p class="featureDesc">
+                    Resourcepack allow us to customize textures, sounds, interface, font styles and other stuffs.
+                    Pinoy LifeCraft is using custom resourcepack to make the server unique, break its limit, add new items and allow us to create truly original server.
+                    <br><br>Please enable server resourcepack when joining the server.
+                </p>
+            </div>
+            <img class="featureImage" src="https://i.imgur.com/gEZADY1.png" alt="Feature(s) Image">
+        </div>
+    </div>
+    <div class="featureSection">
+        <div class="featureContainer featureContainerReverse">
+            <img class="featureImage" src="https://i.imgur.com/Wl7VPjX.png" alt="Feature(s) Image">
+            <div class="featureTextContainer">
+                <p class="featureTitle">Unique Filipino Minecraft Server</p>
+                <p class="featureDesc">
+                    Thanks to our custom resourcepack we are able to break Minecraft vanilla's limit.
+                    By the power of resourcepack your gameplay to the server will be much different compare to classic servers.
+                    <br><br>We ensure to you that more likely everything is organized!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="endofHomeSection">
+        <p id="endofHomeTitle">Are you ready to play the server?</p>
+        <p id="endofHomeDesc">If you did not find our server right for you or looking for something, we recommend you check some at google.com or ask your friend for some reference.</p>
+        <a href="play"><button id="endofHomePlaynow" onclick="splashScreenout()">Get Started</button></a>
+        <a href="https://www.google.com/search?q=minecraft+server+list+philippines" id="endofHomeOtherserver">See other server</a>
+    </div>
+    <div id="footerSection">
+        <div id="footerContainer">
+            <div id="footerNavigations">
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">ABOUT</p>
+                    <a onclick="splashScreenout()" href="index">About us</a>
+                    <a onclick="splashScreenout()" href="https://www.minecraft.net/en-us">About Minecraft</a>
+                    <a onclick="splashScreenout()" href="play">Joining Server</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">SUPPORT</p>
+                    <a onclick="splashScreenout()" href="support">Report Bugs</a>
+                    <a onclick="splashScreenout()" href="support">Help Center</a>
+                    <a onclick="splashScreenout()" href="faq">FAQs</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">INFORMATION</p>
+                    <a onclick="splashScreenout()" href="https://www.facebook.com/pinoylifecraft/">Latest News</a>
+                    <a onclick="splashScreenout()" href="rules">Server Rules</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">COMMUNITY</p>
+                    <a onclick="splashScreenout()" href="https://www.facebook.com/groups/pinoylifecraft">Facebook Group</a>
+                    <a onclick="splashScreenout()" href="https://discord.com/invite/BjtptVp">Discord Server</a>
+                    <a onclick="splashScreenout()" href="https://youtu.be/ac5s6a5ZbWM">Watch Trailer</a>
+                </div>
+            </div>
+            <div id="footerMedias">
+                <div id="footerMediasContainer">
+                    <a href="https://www.facebook.com/pinoylifecraft/" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>Facebook</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="9" y="12" width="12" height="4" fill="#010711"/>
+                            <rect x="13" y="6" width="4" height="18" fill="#010711"/>
+                            <rect x="15" y="4" width="7" height="4" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com/pinoylifecraft" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>YouTube</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="4" y="9" width="2" height="10" fill="#010711"/>
+                            <rect x="6" y="7" width="6" height="14" fill="#010711"/>
+                            <rect x="17" y="7" width="5" height="14" fill="#010711"/>
+                            <rect x="22" y="9" width="2" height="10" fill="#010711"/>
+                            <rect x="15" y="7" width="2" height="6" fill="#010711"/>
+                            <rect x="15" y="15" width="2" height="6" fill="#010711"/>
+                            <rect x="12" y="16" width="3" height="5" fill="#010711"/>
+                            <rect x="12" y="7" width="3" height="5" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@minecraft.john727" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>TikTok</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="14" y="4" width="4" height="18" fill="#010711"/>
+                            <rect x="6" y="12" width="6" height="4" fill="#010711"/>
+                            <rect x="4" y="14" width="4" height="8" fill="#010711"/>
+                            <rect x="6" y="20" width="10" height="4" fill="#010711"/>
+                            <rect x="18" y="6" width="4" height="4" fill="#010711"/>
+                            <rect x="20" y="8" width="4" height="4" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/invite/BjtptVp" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>Discord</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 7H12V9H16V7H22V9H24V19H22V21H18V19H20V18H17V19H11V18H8V19H10V21H6V19H4V9H6V7ZM20 16V12H16V16H20ZM12 16V12H8V16H12Z" fill="#010711"/>
+                        </svg>
+                    </a>
+                </div>
+                <p id="footerCopyright">© 2015-2021, Team Pinoy LifeCraft</p>
+            </div>
+        </div>
+    </div>
+<script src="scripts/home.js"></script>
+</body>
+</html>
