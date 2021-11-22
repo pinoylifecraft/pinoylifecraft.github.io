@@ -1,0 +1,383 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+:root {
+    --lightcolor: #f6f6f6;
+    --primarycolor: #2e3034;
+    --secondarycolor: #696969;
+    --backuptext: #1a5f96;
+    --backuptextlight: #1d73b9;
+    --backgroundcolor: #020711;
+}
+body {
+    background-color: var(--lightcolor);
+    color: var(--primarycolor);
+    overflow-x: hidden;
+}
+#splashScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgroundcolor);
+    position: fixed;
+    z-index: 99;
+}
+@keyframes splashScreen {
+    0% {height: 100vh;}
+    100% {height: 0vh; visibility: hidden;}
+}
+@keyframes splashScreenout {
+    0% {height: 0vh; visibility: visible;}
+    100% {height: 100vh;}
+}
+#splashScreenGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 46px 20px;
+    grid-row-gap: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#splashScreenLoadingAnimation {
+    margin: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+#splashScreenLoadingText {
+    font-size: 12px;
+    color: var(--lightcolor);
+}
+#navSection {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding-top: 19px;
+    background-color: var(--backgroundcolor);
+    z-index: 8;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#navListContainer {
+    display: flex;
+    width: 85%;
+    height: 42px;
+    margin: auto;
+    justify-content: space-between;
+}
+.navList {
+    display: flex;
+    align-items: center;
+}
+#navListLogo {
+    height: 36px;
+    margin-right: 64px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.navListLink {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--lightcolor);
+    margin-right: 64px;
+}
+.navListLink:hover {
+    text-decoration: underline;
+}
+#navListButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 128px;
+    background-color: var(--backuptextlight);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--lightcolor);
+    text-decoration: none;
+}
+#navListButton:hover {
+    background-color: var(--backuptext);
+}
+#mobilenavListContainer {
+    display: none;
+}
+#mobilenavLogo {
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    -webkit-user-select: none;
+    display: none;
+}
+#mobilenavMenuBackground {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, .25);
+}
+#mobilenavMenu {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+#mobilenavMenuClose {
+    position: fixed;
+    right: 3%;
+    top: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+}
+@keyframes NavMenuOpen {
+    0% {visibility: visible; opacity: 1;}
+    100% {visibility: hidden; opacity: 0;}
+}
+@keyframes NavMenuClose {
+    0% {visibility: hidden; opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+#footerSection {
+    background-color: var(--backgroundcolor);
+    width: 100%;
+    padding: 22px 0px 42px;
+}
+#footerContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#footerNavigations {
+    display: flex;
+}
+.footerNavBlock {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.footerNavHeader {
+    color: var(--lightcolor);
+    font-weight: 500;
+    margin: 42px 0px 10px;
+}
+.footerNavBlock a {
+    margin-top: 8px;
+    text-decoration: none;
+    color: #909090;
+}
+.footerNavBlock a:hover {
+    text-decoration: underline;
+}
+#footerMedias {
+    text-align: right;
+}
+#footerMediasContainer a{
+    text-decoration: none;
+}
+.footerMediasLink {
+    margin: 0px 0px 8px 6px;
+}
+#footerCopyright {
+    color: #909090;
+    font-size: 13px;
+    font-weight: 500;
+}
+#homeBackgroundContainer {
+    overflow: hidden;
+    position: relative;
+}
+#homeBackgroundImage {
+    height: 105vh;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+#homeRulesTitle {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80%;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+#homeRulesDesc {
+    position: absolute;
+    bottom: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    max-width: 95%;
+    color: var(--lightcolor);
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, .8);
+}
+#homeRulesDescArrow {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    height: 14px;
+}
+#welcomemsgSection {
+    width: 100%;
+    background-color: var(--backgroundcolor);
+    margin-top: -6px;
+    padding-bottom: 42px;
+}
+#welcomemsgContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+}
+.whiteTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    color: var(--lightcolor);
+}
+.whiteDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondarycolor);
+}
+.rulesSection {
+    width: 100%;
+    padding: 42px 0;
+    background-color: var(--backgroundcolor);
+}
+.rulesGroupContainer {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+}
+.rulesGroupContainerBelow {
+    margin-top: 64px;
+}
+.rulesGroupTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    color: var(--lightcolor);
+}
+.rulesRuleBlock {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f610;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+.rulesRuleNumber {
+    background-color: var(--backgroundcolor);
+    border-radius: 4px;
+    border: none;
+    color: var(--secondarycolor);
+    font-size: 20px;
+    font-weight: bold;
+    width: 42px;
+    height: 42px;
+    margin-right: 16px;
+}
+.rulesRuleText {
+    color: var(--lightcolor);
+    font-size: 14px;
+    font-weight: 500;
+}
+@media screen and (max-width: 1032px) {
+    #splashScreenGrid {
+        top: 40%;
+        transform: translate(-50%, 0%);
+    }
+    #mobilenavLogo {
+        display: block;
+    }
+    #mobilenavMenu {
+        display: block;
+    }
+    #navListContainer {
+        display: none;
+    }
+    #mobilenavListContainer {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        top: -300px;
+        left: 0%;
+        height: auto;
+        width: 100%;
+        background-color: var(--backgroundcolor);
+        align-items: center;
+        padding: 16px 0 32px;
+        z-index: 7;
+    }
+    #navListButton {
+        width: 92%;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .navListLink {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        width: 92%;
+        height: 42px;
+        line-height: 42px;
+        margin: 0px 0px 16px;
+        border-radius: 4px;
+    }
+    .navListLink:hover {
+        text-decoration: none;
+        background-color: #f6f6f610;
+    }
+    #footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #footerMedias {
+        text-align: center;
+        margin-top: 64px;
+    }
+    .footerNavHeader {
+        text-align: center;
+    }
+    .footerNavBlock a {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 744px) {
+    #footerNavigations {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footerNavHeader {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .footerNavBlock a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 360px) {
+}

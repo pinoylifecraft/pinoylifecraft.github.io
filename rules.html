@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinoy LifeCraft - Server Rules</title>
+    <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <link rel="shortcut icon" href="resources/server-logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/rules.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://i.imgur.com/P4dOmQD.png"/>
+    <meta name="theme-color" content="#020711"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R50XKKZYG2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R50XKKZYG2');
+    </script>
+</head>
+<body>
+    <div id="splashScreen">
+        <div id="splashScreenGrid">
+            <img src="resources/splash-screen/loading-animation.gif" alt="Downloading resources, please wait." id="splashScreenLoadingAnimation">
+            <p id="splashScreenLoadingText">Loading resources</p>
+        </div>
+    </div>
+    <nav id="navSection">
+        <div id="navListContainer">
+            <div class="navList">
+                <a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index">
+                    <img src="resources/server-logo/website-logo.png"
+                    alt="Pinoy LifeCraft Home Page Logo" id="navListLogo">
+                </a>
+                <a class="navListLink" onclick="splashScreenout()" href="rules">RULES</a>
+                <a class="navListLink" onclick="splashScreenout()" href="support">SUPPORT</a>
+                <a class="navListLink" onclick="splashScreenout()" href="staff">TEAM</a>
+                <a class="navListLink" onclick="splashScreenout()" href="store">STORE</a>
+            </div>
+            <div class="navList">
+                <a class="navListLink" onclick="splashScreenout()" href="vote">VOTE</a>
+                <a id="navListButton" onclick="splashScreenout()" href="play">PLAY NOW</a>
+            </div>
+        </div>
+        <a title="Pinoy LifeCraft Home Page" onclick="splashScreenout()" href="index">
+            <img src="resources/server-logo/website-logo.png"
+            alt="Pinoy LifeCraft Home Page Logo" id="mobilenavLogo">
+        </a>
+        <svg width="32" height="32" id="mobilenavMenu" onclick="mobilenavMenuFadeout()" viewBox="0 0 32 32">
+            <circle opacity="0" cx="16" cy="16" r="16"></circle>
+            <path fill="#f6f6f6" d="M22 10v2H10v-2zm0 5v2H10v-2zm0 5v2H10v-2z"></path>
+        </svg>
+        <svg width="32" height="32" id="mobilenavMenuClose" onclick="mobilenavMenuFadein()" viewBox="0 0 32 32">
+            <circle opacity="0" cx="16" cy="16" r="16"></circle>
+            <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="#f6f6f6" stroke-width="2"></path>
+        </svg>
+    </nav>
+    <nav id="mobilenavListContainer">
+        <a class="navListLink" onclick="splashScreenout()" href="rules">RULES</a>
+        <a class="navListLink" onclick="splashScreenout()" href="support">SUPPORT</a>
+        <a class="navListLink" onclick="splashScreenout()" href="staff">TEAM</a>
+        <a class="navListLink" onclick="splashScreenout()" href="store">STORE</a>
+        <a class="navListLink" onclick="splashScreenout()" href="vote">VOTE</a>
+        <a id="navListButton" onclick="splashScreenout()" href="play">PLAY NOW</a>
+    </nav>
+    <div id="mobilenavMenuBackground" onclick="mobilenavMenuFadein()"></div>
+    <div id="homeContainer">
+        <div id="homeBackgroundContainer">
+            <img src="resources/homecover/hero_background-default.png" id="homeBackgroundImage" alt="Late night Minecraft terrain, image from minecraft.net">
+            <img src="resources/homecover/server-rules.png" id="homeRulesTitle" alt="Server Rules logo">
+            <p id="homeRulesDesc">
+                Read the rules down below!
+            </p>
+            <svg id="homeRulesDescArrow" x="0px" y="0px" viewBox="0 0 55.752 55.752">
+                <title>Scroll down to see the rules.</title>
+                <g>
+                    <path fill="var(--lightcolor)" d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+                        c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+                        s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+                        C44.605,26.413,44.086,24.993,43.006,23.916z"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div id="welcomemsgSection">
+        <div id="welcomemsgContainer">
+            <p class="whiteTitle">Welcome to Pinoy LifeCraft rules page!</p>
+            <p class="whiteDesc">
+                You can read our rules here simple and easy.
+                Please follow rules and avoid being bad player.
+                If a rule is broken live then you'll punushed accordingly, just like
+                everyone else. Pinoy LifeCraft staff do their best to keep the server
+                safe and enjoyable for everyone. If you have been warned by the
+                staff/s, then we are expecting you to respect their decision and work
+                with them to resolve the situation.
+            </p>
+        </div>
+    </div>
+    <div class="rulesSection">
+        <div class="rulesGroupContainer">
+            <p class="rulesGroupTitle">Inappropriate Chat Conduct</p>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">1</button>
+                <span class="rulesRuleText">Disrespect/offensive language and hate speech.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">2</button>
+                <span class="rulesRuleText">Racism and Discrimination.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">3</button>
+                <span class="rulesRuleText">Intentionallly avoiding the chat filter.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">4</button>
+                <span class="rulesRuleText">Spamming or rioting of any kind.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">5</button>
+                <span class="rulesRuleText">Sharing other's private information.</span>
+            </div>
+        </div>
+        <div class="rulesGroupContainer rulesGroupContainerBelow">
+            <p class="rulesGroupTitle">Inappropriate Behavior</p>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">1</button>
+                <span class="rulesRuleText">Intentionallly griefing other players land.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">2</button>
+                <span class="rulesRuleText">Intentionallly attempting to kill someone outside of PVP areas.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">3</button>
+                <span class="rulesRuleText">Scamming other players via trades etc.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">4</button>
+                <span class="rulesRuleText">Illegal builds or symbols.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">5</button>
+                <span class="rulesRuleText">Innapropriate in game name and skins.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">6</button>
+                <span class="rulesRuleText">Evading punishment by using alternate accounts.</span>
+            </div>
+        </div>
+        <div class="rulesGroupContainer rulesGroupContainerBelow">
+            <p class="rulesGroupTitle">Glitches and Exploits</p>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">1</button>
+                <span class="rulesRuleText">Exploiting a game system.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">2</button>
+                <span class="rulesRuleText">Duplicating items.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">3</button>
+                <span class="rulesRuleText">Participating bugs for own good.</span>
+            </div>
+        </div>
+        <div class="rulesGroupContainer rulesGroupContainerBelow">
+            <p class="rulesGroupTitle">Using Hacked Clients</p>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">1</button>
+                <span class="rulesRuleText">X-ray mod or resource pack.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">2</button>
+                <span class="rulesRuleText">Hacked clients.</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">3</button>
+                <span class="rulesRuleText">Auto click</span>
+            </div>
+        </div>
+    </div>
+    <div id="footerSection">
+        <div id="footerContainer">
+            <div id="footerNavigations">
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">ABOUT</p>
+                    <a onclick="splashScreenout()" href="index">About us</a>
+                    <a onclick="splashScreenout()" href="https://www.minecraft.net/en-us">About Minecraft</a>
+                    <a onclick="splashScreenout()" href="play">Joining Server</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">SUPPORT</p>
+                    <a onclick="splashScreenout()" href="support">Report Bugs</a>
+                    <a onclick="splashScreenout()" href="support">Help Center</a>
+                    <a onclick="splashScreenout()" href="faq">FAQs</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">INFORMATION</p>
+                    <a onclick="splashScreenout()" href="https://www.facebook.com/pinoylifecraft/">Latest News</a>
+                    <a onclick="splashScreenout()" href="rules">Server Rules</a>
+                </div>
+                <div class="footerNavBlock">
+                    <p class="footerNavHeader">COMMUNITY</p>
+                    <a onclick="splashScreenout()" href="https://www.facebook.com/groups/pinoylifecraft">Facebook Group</a>
+                    <a onclick="splashScreenout()" href="https://discord.com/invite/BjtptVp">Discord Server</a>
+                    <a onclick="splashScreenout()" href="https://youtu.be/ac5s6a5ZbWM">Watch Trailer</a>
+                </div>
+            </div>
+            <div id="footerMedias">
+                <div id="footerMediasContainer">
+                    <a href="https://www.facebook.com/pinoylifecraft/" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>Facebook</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="9" y="12" width="12" height="4" fill="#010711"/>
+                            <rect x="13" y="6" width="4" height="18" fill="#010711"/>
+                            <rect x="15" y="4" width="7" height="4" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com/pinoylifecraft" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>YouTube</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="4" y="9" width="2" height="10" fill="#010711"/>
+                            <rect x="6" y="7" width="6" height="14" fill="#010711"/>
+                            <rect x="17" y="7" width="5" height="14" fill="#010711"/>
+                            <rect x="22" y="9" width="2" height="10" fill="#010711"/>
+                            <rect x="15" y="7" width="2" height="6" fill="#010711"/>
+                            <rect x="15" y="15" width="2" height="6" fill="#010711"/>
+                            <rect x="12" y="16" width="3" height="5" fill="#010711"/>
+                            <rect x="12" y="7" width="3" height="5" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@minecraft.john727" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>TikTok</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <rect x="14" y="4" width="4" height="18" fill="#010711"/>
+                            <rect x="6" y="12" width="6" height="4" fill="#010711"/>
+                            <rect x="4" y="14" width="4" height="8" fill="#010711"/>
+                            <rect x="6" y="20" width="10" height="4" fill="#010711"/>
+                            <rect x="18" y="6" width="4" height="4" fill="#010711"/>
+                            <rect x="20" y="8" width="4" height="4" fill="#010711"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/invite/BjtptVp" >
+                        <svg class="footerMediasLink" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                            <title>Discord</title>
+                            <rect width="28" height="28" fill="#F6F6F6"/>
+                            <rect width="2" height="2" fill="#010711"/>
+                            <rect y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" y="26" width="2" height="2" fill="#010711"/>
+                            <rect x="26" width="2" height="2" fill="#010711"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 7H12V9H16V7H22V9H24V19H22V21H18V19H20V18H17V19H11V18H8V19H10V21H6V19H4V9H6V7ZM20 16V12H16V16H20ZM12 16V12H8V16H12Z" fill="#010711"/>
+                        </svg>
+                    </a>
+                </div>
+                <p id="footerCopyright">© 2015-2021, Team Pinoy LifeCraft</p>
+            </div>
+        </div>
+    </div>
+<script src="scripts/home.js"></script>
+</body>
+</html>
