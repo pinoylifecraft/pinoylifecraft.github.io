@@ -264,7 +264,7 @@ body {
 }
 .rulesSection {
     width: 100%;
-    padding: 42px 0;
+    padding: 42px 0px 98px;
     background-color: var(--backgroundcolor);
 }
 .rulesGroupContainer {
@@ -304,6 +304,48 @@ body {
     color: var(--lightcolor);
     font-size: 14px;
     font-weight: 500;
+}
+#endofHomeSection {
+    width: 860px;
+    max-width: 95%;
+    margin: 64px auto;
+    padding: 100px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#endofHomeTitle {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 26px;
+    color: var(--primarycolor);
+    text-align: center;
+}
+#endofHomeDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondarycolor);
+    text-align: center;
+    padding-bottom: 64px;
+}
+#endofHomePlaynow {
+    background-color: var(--backuptextlight);
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    width: 250px;
+    color: var(--lightcolor);
+    border: none;
+    border-radius: 4px;
+}
+#endofHomePlaynow:hover {
+    background-color: var(--backuptext);
+    cursor: pointer;
+}
+#endofHomeOtherserver {
+    font-size: 14px;
+    color: var(--backuptext);
+    margin-top: 16px;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -364,6 +406,26 @@ body {
     }
     .footerNavBlock a {
         text-align: center;
+    }
+    .whiteTitle {
+        text-align: center;
+    }
+    .whiteDesc {
+        text-align: center;
+    }
+    .rulesGroupTitle {
+        text-align: center;
+    }
+    .rulesRuleBlock {
+        position: relative;
+        height: auto;
+        min-height: 54px;
+    }
+    .rulesRuleNumber {
+        position: absolute;
+    }
+    .rulesRuleText {
+        margin-left: 54px;
     }
 }
 @media screen and (max-width: 744px) {
