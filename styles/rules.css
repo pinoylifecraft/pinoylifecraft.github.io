@@ -201,61 +201,28 @@ body {
     font-size: 13px;
     font-weight: 500;
 }
-#homeBackgroundContainer {
-    overflow: hidden;
-    position: relative;
+#homeContainer {
+    padding: 10% 0px;
 }
-#homeBackgroundImage {
-    height: 105vh;
-    user-select: none;
-    -webkit-user-select: none;
-    pointer-events: none;
-}
-#homeRulesTitle {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 80%;
-    user-select: none;
-    -webkit-user-select: none;
-    pointer-events: none;
-}
-#homeRulesDesc {
-    position: absolute;
-    bottom: 26%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    max-width: 95%;
-    color: var(--lightcolor);
-    font-size: 12px;
+#homeContentTitle {
+    color: var(--primarycolor);
+    font-size: 42px;
+    font-weight: 700;
     text-align: center;
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, .8);
-}
-#homeRulesDescArrow {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
-    height: 14px;
-}
-#welcomemsgSection {
-    width: 100%;
-    background-color: var(--backgroundcolor);
-    margin-top: -6px;
-    padding-bottom: 42px;
+    width: 850px;
+    margin: auto;
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
 }
 #welcomemsgContainer {
-    width: 1064px;
-    max-width: 95%;
-    margin: auto;
+    padding-bottom: 64px;
 }
 .whiteTitle {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 26px;
-    color: var(--lightcolor);
+    color: var(--primarycolor);
 }
 .whiteDesc {
     font-size: 14px;
@@ -263,14 +230,12 @@ body {
     color: var(--secondarycolor);
 }
 .rulesSection {
-    width: 100%;
-    padding: 42px 0px 98px;
-    background-color: var(--backgroundcolor);
-}
-.rulesGroupContainer {
     width: 1064px;
     max-width: 95%;
     margin: auto;
+    padding: 64px 32px;
+    border-radius: 4px;
+    background-color: #fff;
 }
 .rulesGroupContainerBelow {
     margin-top: 64px;
@@ -279,21 +244,21 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 26px;
-    color: var(--lightcolor);
+    color: var(--primarycolor);
 }
 .rulesRuleBlock {
     display: flex;
     align-items: center;
-    background-color: #f6f6f610;
+    background-color: var(--lightcolor);
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 12px;
 }
 .rulesRuleNumber {
-    background-color: var(--backgroundcolor);
+    background-color: var(--backuptextlight);
     border-radius: 4px;
     border: none;
-    color: var(--secondarycolor);
+    color: var(--lightcolor);
     font-size: 20px;
     font-weight: bold;
     width: 42px;
@@ -301,7 +266,7 @@ body {
     margin-right: 16px;
 }
 .rulesRuleText {
-    color: var(--lightcolor);
+    color: var(--primarycolor);
     font-size: 14px;
     font-weight: 500;
 }
@@ -407,6 +372,11 @@ body {
     .footerNavBlock a {
         text-align: center;
     }
+    #homeContentTitle {
+        font-size: 28px;
+        line-height: 1.6;
+        max-width: 95%;
+    }
     .whiteTitle {
         text-align: center;
     }
@@ -439,6 +409,9 @@ body {
     }
     .footerNavBlock a {
         font-size: 14px;
+    }
+    #homeContainer {
+        padding: 14% 0px;
     }
 }
 @media screen and (max-width: 360px) {
