@@ -215,102 +215,208 @@ body {
                  10px 20px 5px rgba(0,0,0,0.05),
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
-#welcomemsgContainer {
-    padding-bottom: 64px;
-}
-.whiteTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 26px;
-    color: var(--primarycolor);
-}
-.whiteDesc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--secondarycolor);
-}
-.rulesSection {
+#forumTipContainer {
+    margin: 0 auto 90px;
     width: 1064px;
     max-width: 95%;
-    margin: auto;
-    padding: 64px 32px;
-    border-radius: 4px;
     background-color: #fff;
-}
-.rulesGroupContainerBelow {
-    margin-top: 64px;
-}
-.rulesGroupTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 26px;
-    color: var(--primarycolor);
-}
-.rulesRuleBlock {
-    display: flex;
-    align-items: center;
-    background-color: var(--lightcolor);
     border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 12px;
-}
-.rulesRuleNumber {
-    background-color: var(--backuptextlight);
-    border-radius: 4px;
-    border: none;
-    color: var(--lightcolor);
-    font-size: 20px;
-    font-weight: bold;
-    width: 42px;
-    height: 42px;
-    margin-right: 16px;
-}
-.rulesRuleText {
-    color: var(--primarycolor);
-    font-size: 14px;
-    font-weight: 500;
-}
-#endofHomeSection {
-    width: 860px;
-    max-width: 95%;
-    margin: 64px auto;
-    padding: 100px 15px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
-#endofHomeTitle {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 26px;
-    color: var(--primarycolor);
-    text-align: center;
-}
-#endofHomeDesc {
+#forumTipText {
     font-size: 14px;
     line-height: 1.6;
-    color: var(--secondarycolor);
-    text-align: center;
-    padding-bottom: 64px;
+    color: var(--primarycolor);
+    padding: 18px;
 }
-#endofHomePlaynow {
-    background-color: var(--backuptextlight);
+#forumTipLink {
     font-size: 14px;
-    font-weight: 600;
-    height: 50px;
-    width: 250px;
-    color: var(--lightcolor);
-    border: none;
-    border-radius: 4px;
+    line-height: 1.6;
+    color: var(--backuptextlight);
+    text-decoration: none;
 }
-#endofHomePlaynow:hover {
-    background-color: var(--backuptext);
+#forumTipLink:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
-#endofHomeOtherserver {
+#forumTipsContainer {
+    display: none;
+}
+#forumTipsNotice {
+    background-color: rgba(238, 255, 0, 0.10);
+    padding: 32px;
+    border-radius: 4px;
+    border: solid 1px rgba(72, 72, 0, 0.1);
+    margin: 42px 0 0;
+}
+#forumTipsNoticeTitle {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: var(--primarycolor);
+}
+#forumTipsNoticeDesc {
+    color: var(--secondarycolor);
+}
+#forumTipsNoticeDesc a {
+    color: var(--backuptextlight);
+}
+#forumNavContainer {
+    margin: 0px auto 24px;
+    width: 1064px;
+    max-width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.forumNav1 {
     font-size: 14px;
-    color: var(--backuptext);
-    margin-top: 16px;
+    color: var(--primarycolor);
+    text-decoration: none;
+    margin-right: 32px;
+}
+.forumNav1:hover {
+    color: var(--backuptextlight);
+}
+#forumNav2 {
+    position: relative;
+    color: var(--secondarycolor);
+    text-decoration: none;
+    background-color: #fff;
+    border: solid 1px rgb(230, 230, 230);
+    padding: 12px 20px 12px 42px;
+    border-radius: 4px;
+}
+#forumNav2:hover {
+    border: solid 1px rgb(200, 200, 200);
+}
+#forumNavV {
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--backuptextlight);
+    width: 2px;
+    height: 12px;
+}
+#forumNavH {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--backuptextlight);
+    width: 12px;
+    height: 2px;
+}
+#forumNav3 {
+    position: relative;
+    color: var(--secondarycolor);
+    background-color: #fff;
+    border: solid 1px rgb(230, 230, 230);
+    padding: 12px 20px 12px 42px;
+    border-radius: 4px;
+    display: none;
+}
+#forumNav3:hover {
+    border: solid 1px rgb(200, 200, 200);
+}
+#forumNavV3 {
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--backuptextlight);
+    width: 2px;
+    height: 14px;
+}
+#forumNavH3 {
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: var(--backuptextlight);
+    width: 2px;
+    height: 14px;
+}
+#forumTopicContainer {
+    margin: 0 auto 90px;
+    width: 1064px;
+    max-width: 95%;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+.forumTopicBlocks {
+    background-color: var(--lightcolor);
+    border-radius: 4px;
+    border: solid 1px rgb(230, 230, 230);
+    padding: 32px 24px;
+    text-decoration: none;
+    width: 484px;
+}
+.forumTopicBlocks:hover {
+    border: solid 1px rgb(200, 200, 200);
+}
+.forumTopicBlocksOdd {
+    margin: 0px 32px 32px 0px;
+}
+.forumTopicBlocksEven {
+    margin: 0px 0px 32px 0px;
+}
+.forumTopicTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--backuptextlight);
+}
+.forumTopicDesc {
+    line-height: 1.6;
+    color: var(--secondarycolor);
+}
+#forumNewpostSection {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+#forumNewpostContainer {
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 714px;
+    max-width: 90%;
+    padding: 32px;
+    border-radius: 4px;
+}
+#forumNewpostTitle {
+    text-align: center;
+    color: var(--primarycolor);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+.forumNewpostLinks {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: var(--primarycolor);
+    background-color: var(--lightcolor);
+    padding: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.forumNewpostLinks:hover {
+    background-color: var(--backuptextlight);
+    color: var(--lightcolor);
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -375,10 +481,7 @@ body {
     #homeContentTitle {
         font-size: 28px;
         line-height: 1.6;
-        max-width: 95%;
-    }
-    .rulesSection {
-        padding: 64px 2.5%;
+        max-width: 90%;
     }
     .whiteTitle {
         text-align: center;
@@ -400,6 +503,15 @@ body {
     .rulesRuleText {
         margin-left: 54px;
     }
+    .forumTopicBlocks {
+        width: 100%;
+    }
+    .forumTopicBlocksOdd {
+        margin: 0 0 16px;
+    }
+    .forumTopicBlocksEven {
+        margin: 0 0 16px;
+    }
 }
 @media screen and (max-width: 744px) {
     #footerNavigations {
@@ -416,6 +528,15 @@ body {
     #homeContainer {
         padding: 14% 0px;
     }
+    #forumTopicContainer {
+        padding: 32px 3.5%;
+    }
+    #forumTipsNotice {
+        padding: 3.5%;
+    }
 }
 @media screen and (max-width: 360px) {
+    #homeContentTitle {
+        max-width: 80%;
+    }
 }
