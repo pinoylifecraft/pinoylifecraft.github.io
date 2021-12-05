@@ -215,114 +215,58 @@ body {
                  10px 20px 5px rgba(0,0,0,0.05),
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
-#welcomemsgContainer {
-    padding-bottom: 64px;
-}
-.whiteTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 26px;
-    color: var(--primarycolor);
-}
-.whiteDesc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--secondarycolor);
-}
-.rulesSection {
+.staffSection {
     width: 1064px;
     max-width: 95%;
     margin: auto;
-    padding: 64px 32px;
+    padding: 32px;
     border-radius: 4px;
     background-color: #fff;
-}
-.rulesGroupContainerBelow {
-    margin-top: 64px;
-}
-.rulesGroupTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 26px;
-    color: var(--primarycolor);
-}
-.rulesRuleBlock {
     display: flex;
-    align-items: center;
-    background-color: var(--lightcolor);
-    border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
 }
-.voteBlock {
-    justify-content: space-between;
-}
-.voteSiteName {
-    display: flex;
-    align-items: center;
-}
-.rulesRuleNumber {
-    background-color: var(--backuptextlight);
-    border-radius: 4px;
-    border: none;
-    color: var(--lightcolor);
-    font-size: 20px;
-    font-weight: bold;
-    width: 42px;
-    height: 42px;
-    margin-right: 16px;
-}
-.rulesRuleText {
-    color: var(--primarycolor);
-    font-size: 14px;
-    font-weight: 500;
-}
-.voteLink {
-    color: var(--backuptextlight);
-    text-decoration: none;
-    margin-right: 24px;
-}
-#endofHomeSection {
-    width: 860px;
-    max-width: 95%;
-    margin: 64px auto;
-    padding: 100px 15px;
+.staffBlocks {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 168px;
+    height: 200px;
+    padding: 20px;
+    border: solid 1px #d8dee4;
+    border-radius: 4px;
+    box-shadow: 0px 6px 6px rgb(0 0 0 / 10%);
+    margin: 16px;
+    text-decoration: none;
 }
-#endofHomeTitle {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 26px;
-    color: var(--primarycolor);
+.staffBlocks img {
+    width: 58px;
+    height: 78px;
+}
+.staffBlocks p {
     text-align: center;
-}
-#endofHomeDesc {
-    font-size: 14px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    background-color: var(--lightcolor);
     color: var(--secondarycolor);
-    text-align: center;
-    padding-bottom: 64px;
-}
-#endofHomePlaynow {
-    background-color: var(--backuptextlight);
-    font-size: 14px;
-    font-weight: 600;
-    height: 50px;
-    width: 250px;
-    color: var(--lightcolor);
-    border: none;
+    padding: 2px 10px;
     border-radius: 4px;
 }
-#endofHomePlaynow:hover {
-    background-color: var(--backuptext);
-    cursor: pointer;
+.staffApplyV {
+    width: 4px;
+    height: 26px;
+    background-color: var(--backuptextlight);
 }
-#endofHomeOtherserver {
-    font-size: 14px;
-    color: var(--backuptext);
-    margin-top: 16px;
+.staffApplyH {
+    width: 26px;
+    height: 4px;
+    margin-top: -14px;
+    background-color: var(--backuptextlight);
+}
+.staffApplyT {
+    color: #cccccc;
+    margin-top: 24px;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -389,28 +333,8 @@ body {
         line-height: 1.6;
         max-width: 95%;
     }
-    .rulesSection {
-        padding: 64px 2.5%;
-    }
-    .whiteTitle {
-        text-align: center;
-    }
-    .whiteDesc {
-        text-align: center;
-    }
-    .rulesGroupTitle {
-        text-align: center;
-    }
-    .rulesRuleBlock {
-        position: relative;
-        height: auto;
-        min-height: 54px;
-    }
-    .rulesRuleNumber {
-        position: absolute;
-    }
-    .rulesRuleText {
-        margin-left: 54px;
+    .staffSection {
+        padding: 3%;
     }
 }
 @media screen and (max-width: 744px) {
