@@ -204,6 +204,10 @@ body {
 #homeContainer {
     padding: 10% 0px;
 }
+#errorHomeContainer {
+    display: flex;
+    height: calc(100vh - 280px);
+}
 #homeContentTitle {
     color: var(--backuptextlight);
     font-size: 42px;
@@ -533,6 +537,9 @@ body {
     }
     #forumTipsNotice {
         padding: 3.5%;
+    }
+    #errorHomeContainer {
+        height: 100vh;
     }
 }
 @media screen and (max-width: 360px) {
