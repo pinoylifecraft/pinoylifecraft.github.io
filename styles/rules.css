@@ -257,9 +257,20 @@ body {
 .voteBlock {
     justify-content: space-between;
 }
+.playBlock {
+    background-color: var(--lightcolor) !important;
+    color: var(--backuptextlight) !important;
+    border: solid 1px var(--backuptextlight) !important;
+}
 .voteSiteName {
     display: flex;
     align-items: center;
+}
+.playImage {
+    margin: 32px auto 0px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 4px;
 }
 .rulesRuleNumber {
     background-color: var(--backuptextlight);
@@ -323,6 +334,94 @@ body {
     font-size: 14px;
     color: var(--backuptext);
     margin-top: 16px;
+}
+#playnowSolutionSection {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 98;
+}
+#playnowSolutionContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 85vh;
+    width: 760px;
+    max-width: 95%;
+    background-color: var(--lightcolor);
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    padding: 42px;
+    display: none;
+    z-index: 99;
+}
+#playnowSolutionHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+#playnowSolutionHeaderContainer {
+    display: flex;
+    align-items: center;
+}
+#playnowSolutionHeaderContainer svg {
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+}
+#playnowSolutionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primarycolor);
+    line-height: 34px;
+}
+#playnowSolutionClose {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0px 8px;
+}
+#playnowSolutionClose:hover {
+    background-color: #02071108;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#playnowSolutionSolutions {
+    width: 100%;
+    height: calc(100% - 76px);
+    overflow-y: scroll;
+}
+#playnowSolutionSolutions::-webkit-scrollbar {
+    width: 6px;
+}
+#playnowSolutionSolutions::-webkit-scrollbar-thumb {
+    background-color: var(--backuptextlight);
+    border-radius: 4px;
+}
+.playnowSolutionSolutionsTitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 0px 12px 32px;
+    position: relative;
+}
+.playnowSolutionSolutionsTitle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -29px;
+    width: 6px;
+    height: 6px;
+    border: solid 3px var(--backuptextlight);
+    border-radius: 4px;
+}
+.playnowSolutionSolutionsDesc {
+    line-height: 1.6;
+    color: var(--secondarycolor);
+    margin: 0px 0px 24px 32px;
 }
 @media screen and (max-width: 1032px) {
     #splashScreenGrid {
@@ -427,6 +526,9 @@ body {
     }
     #homeContainer {
         padding: 14% 0px;
+    }
+    #playnowSolutionContainer {
+        padding: 8%;
     }
 }
 @media screen and (max-width: 360px) {

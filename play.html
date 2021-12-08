@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pinoy LifeCraft - Vote to support :3</title>
+    <title>Pinoy LifeCraft - Connect & Play</title>
     <meta name="description" content="Pinoy LifeCraft - A Filipino server for Minecraft Java Edition!">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width", initial-scale=1.0>
@@ -69,58 +69,134 @@
     </nav>
     <div id="mobilenavMenuBackground" onclick="mobilenavMenuFadein()"></div>
     <div id="homeContainer">
-        <p id="homeContentTitle">Vote Pinoy LifeCraft</p>
+        <p id="homeContentTitle">Connect and Join The Filipino Minecraft Server</p>
     </div>
     <div class="rulesSection">
-        <div id="welcomemsgContainer">
-            <p class="whiteTitle">Vote to support the server & get rewards!</p>
-            <p class="whiteDesc">
-                Select one of the voting sites below to support and earn epic rewards.
-                You helped us go on the top and advertised to people for voting the server.
-                When on site just enter your username and press vote to get chance to
-                win vote points, Personal Multipliers and even special diamond!
-            </p>
-        </div>
         <div class="rulesGroupContainer">
-            <p class="rulesGroupTitle">Our official voting sites:</p>
-            <div class="rulesRuleBlock voteBlock">
-                <div class="voteSiteName">
-                    <button class="rulesRuleNumber playBlock">1</button>
-                    <span class="rulesRuleText">Minecraft-MP</span>
-                </div>
-                <a class="voteLink" href="http://" target="_blank" rel="noopener noreferrer">Vote now</a>
+            <div id="welcomemsgContainer">
+                <p class="whiteDesc">
+                    Notice to players: The server is on offline mode, we do this so that everyone can play.
+                    Please buy Minecraft if you can afford 1,400 pesos, you can purchase one of these from the official
+                    website minecraft.net.
+                </p>
             </div>
-            <div class="rulesRuleBlock voteBlock">
-                <div class="voteSiteName">
-                    <button class="rulesRuleNumber playBlock">2</button>
-                    <span class="rulesRuleText">Top Minecraft Servers</span>
-                </div>
-                <a class="voteLink" href="http://" target="_blank" rel="noopener noreferrer">Vote now</a>
+            <p class="rulesGroupTitle">How to connect and play the server:</p>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber playBlock">1</button>
+                <span class="rulesRuleText">Open up Minecraft and navigate to the Multiplayer Menu</span>
             </div>
-            <div class="rulesRuleBlock voteBlock">
-                <div class="voteSiteName">
-                    <button class="rulesRuleNumber playBlock">3</button>
-                    <span class="rulesRuleText">Minecraft Servers</span>
-                </div>
-                <a class="voteLink" href="http://" target="_blank" rel="noopener noreferrer">Vote now</a>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber playBlock">2</button>
+                <span class="rulesRuleText">Click on the "Add Server" button</span>
             </div>
-            <div class="rulesRuleBlock voteBlock">
-                <div class="voteSiteName">
-                    <button class="rulesRuleNumber playBlock">4</button>
-                    <span class="rulesRuleText">Top G</span>
-                </div>
-                <a class="voteLink" href="http://" target="_blank" rel="noopener noreferrer">Vote now</a>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber playBlock">3</button>
+                <span class="rulesRuleText">Enter play.pinoylifecraft.com as the server IP server name can be anything</span>
             </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber playBlock">4</button>
+                <span class="rulesRuleText">Make sure to select Server Resource Packs: Enabled</span>
+            </div>
+            <div class="rulesRuleBlock">
+                <button class="rulesRuleNumber">5</button>
+                <span class="rulesRuleText">Press Done and Connect to start playing!</span>
+            </div>
+            <img class="playImage" src="https://i.imgur.com/gEZADY1.png" alt="How to join Pinoy LifeCraft summary.">
         </div>
     </div>
     <div id="endofHomeSection">
-        <p id="endofHomeTitle">Wanna donate without spending money?</p>
+        <p id="endofHomeTitle">Did you encounter problem when joining?</p>
         <p id="endofHomeDesc">
-            Just click "watch ad" and idle for 1 min. that will pretty sure help 
-            us earn money. Buying at store page also help us.
+            It is possible that you will be unable to connect to the server at any time.
+            There could be a variety of reasons for this. We have a list of problems and a solution you might be having.
         </p>
-        <a href="play"><button id="endofHomePlaynow" onclick="splashScreenout()">Watch Ad</button></a>
-        <a href="https://www.google.com/search?q=minecraft+server+list+philippines" id="endofHomeOtherserver">Shop now</a>
+        <button id="endofHomePlaynow" onclick="playnowProblemOpen()">Open Solution</button>
+        <a href="https://discord.com/invite/BjtptVp" id="endofHomeOtherserver">Ask on Discord</a>
+    </div>
+    <div id="playnowSolutionSection" onclick="playnowProblemClose()"></div>
+    <div id="playnowSolutionContainer">
+        <div id="playnowSolutionHeader">
+            <div id="playnowSolutionHeaderContainer">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" fill="#F6F6F6"/>
+                    <rect x="16" y="2" width="6" height="2" fill="#1D73B9"/>
+                    <rect x="12" y="4" width="4" height="2" fill="#1D73B9"/>
+                    <rect x="22" y="4" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="8" y="6" width="4" height="2" fill="#1D73B9"/>
+                    <rect x="4" y="8" width="4" height="2" fill="#1D73B9"/>
+                    <rect y="10" width="4" height="2" fill="#1D73B9"/>
+                    <rect y="12" width="2" height="8" fill="#1D73B9"/>
+                    <rect x="24" y="6" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="26" y="8" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="28" y="10" width="2" height="4" fill="#1D73B9"/>
+                    <rect x="30" y="12" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="28" y="18" width="4" height="4" fill="#1D73B9"/>
+                    <rect x="24" y="20" width="4" height="4" fill="#1D73B9"/>
+                    <rect x="20" y="22" width="4" height="4" fill="#1D73B9"/>
+                    <rect x="16" y="24" width="4" height="4" fill="#1D73B9"/>
+                    <rect x="10" y="26" width="6" height="4" fill="#1D73B9"/>
+                    <rect x="8" y="24" width="2" height="4" fill="#1D73B9"/>
+                    <rect x="6" y="22" width="2" height="4" fill="#1D73B9"/>
+                    <rect x="4" y="20" width="2" height="4" fill="#1D73B9"/>
+                    <rect x="2" y="14" width="2" height="8" fill="#1D73B9"/>
+                    <rect x="4" y="14" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="6" y="16" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="8" y="18" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="10" y="20" width="6" height="2" fill="#1D73B9"/>
+                    <rect x="16" y="18" width="4" height="2" fill="#1D73B9"/>
+                    <rect x="20" y="16" width="4" height="2" fill="#1D73B9"/>
+                    <rect x="24" y="14" width="4" height="2" fill="#1D73B9"/>
+                    <rect x="20" y="12" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="18" y="10" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="16" y="8" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="10" y="12" width="2" height="2" fill="#1D73B9"/>
+                    <rect x="12" y="14" width="2" height="2" fill="#1D73B9"/>
+                </svg>
+                <p id="playnowSolutionTitle">Common Issues</p>
+            </div>
+            <p id="playnowSolutionClose" onclick="playnowProblemClose()">&times;</p>
+        </div>
+        <div id="playnowSolutionSolutions">
+            <p class="playnowSolutionSolutionsTitle">You did not accept server's resourcepack</p>
+            <p class="playnowSolutionSolutionsDesc">
+                If you followed the steps on how to join the server there should be no problem, or this is.
+                Commonly it is because of a Minecraft bug. To fix this, delete the current server and make a new one.
+                If it didn't fix the problem, go join our Discord server. We have a lot of people to help you there.
+            </p>
+            <p class="playnowSolutionSolutionsTitle">Your account has been banned</p>
+            <p class="playnowSolutionSolutionsDesc">
+                When you break one of our rules, you will be banned automatically or manually.
+                You may want to look at our support page about how to (possibly) get unbanned.
+                Also please follow rules to avoid getting banned. You can find rules at game info page.
+            </p>
+            <p class="playnowSolutionSolutionsTitle">Your username is incorrect or already owned</p>
+            <p class="playnowSolutionSolutionsDesc">
+                That happens a lot, specially to piso net players. They often forget their username.
+                Go restart Minecraft and make sure that the username is correct.
+                If already owned username it is common sense to try other username that is not owned by others.
+            </p>
+            <p class="playnowSolutionSolutionsTitle">Your internet connection speed is slow​</p>
+            <p class="playnowSolutionSolutionsDesc">
+                In many cases, players' internet connection speeds are insufficient, making it difficult to join our server.
+                Usually, simply resetting your router will solve the problem.
+                If you're still having trouble connecting to the server, try unplugging any other devices
+                that might be limiting your internet access.
+            </p>
+            <p class="playnowSolutionSolutionsTitle">Outdated Version​</p>
+            <p class="playnowSolutionSolutionsDesc">
+                If you get a message that your launcher is out of date,
+                you'll need to restart it and update to our compatible versions.
+                We hope you have a good time playing the server. If you need more
+                assistance, please go to website's support pages or join our Discord server.
+            </p>
+            <p class="playnowSolutionSolutionsTitle">Server maintenance or offline</p>
+            <p class="playnowSolutionSolutionsDesc">
+                If you receive a message stating that the server is under maintenance,
+                it means that no one can connect at that time. Please wait and try connecting
+                again later. If it said offline, go contact us to notify the staffs about the
+                what happened.
+            </p>
+        </div>
     </div>
     <div id="footerSection">
         <div id="footerContainer">

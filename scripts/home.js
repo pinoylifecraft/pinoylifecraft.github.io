@@ -176,3 +176,13 @@ function screenshotNext6 () {
 function screenshotClose () {
     viewerBG2.style.display = "none"
 }
+
+// PLAY NOW SOLUTIONS
+function playnowProblemOpen () {
+    playnowSolutionSection.style.display = "block"
+    playnowSolutionContainer.style.display = "block"
+}
+function playnowProblemClose () {
+    playnowSolutionSection.style.display = "none"
+    playnowSolutionContainer.style.display = "none"
+}
